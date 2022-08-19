@@ -1,0 +1,70 @@
+.singIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singInContent {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 15px;
+    min-width: 250px;
+}
+.inputContent {
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+}
+.inputContent > h2, p {
+    margin: 5px;
+
+}
+
+.singInInput{
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
+    font-size: 14px;/*Задаем размер шрифта*/
+    color: #ffffff; /*Задаем свет шрифта*/
+    font-weight: 400;  /* жжирность шрифта*/
+    background-color: rgba(0, 0, 0, 0.603);
+    text-align: center;
+}
+
+.singInButton {
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 15px;
+    margin: 0;/*Убирает стандартные оцтупы*/
+    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
+    font-size: 14px;/*Задаем размер шрифта*/
+    color: #ffffff; /*Задаем свет шрифта*/
+    font-weight: 400;  /* жжирность шрифта*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+.singInButton:hover {
+    background-color: rgb(255, 255, 255);
+    color: #ff0000; /*Задаем свет шрифта*/
+}
+.changeContent {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5;
+    margin-top: 15px;
+}
+
+.singIn_link {
+    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
+    font-size: 14px;/*Задаем размер шрифта*/
+    color: #000000; /*Задаем свет шрифта*/
+    font-weight: 400;  /* жжирность шрифта*/
+    display: flex;
+    justify-content: center;
+}
+.singIn_link:hover {
+    color:rgba(255, 0, 0, 0.842);
+    text-decoration:underline;
+}

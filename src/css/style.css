@@ -1,0 +1,69 @@
+body, header, footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    margin: 0;/*Убирает стандартные оцтупы*/
+    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
+    font-size: 14px;/*Задаем размер шрифта*/
+    color: #ffffff; /*Задаем свет шрифта*/
+    font-weight: 400;  /* жжирность шрифта*/
+    background-color: #fff; /*Цвет фона для body*/
+}
+button {
+    font-style: none;
+    background-color: #00000000;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    margin: 0; /*Убираем все оцтупы*/
+    box-sizing: border-box; /*Фиксируем размер блоков,  оцтупы не будут влиять на размер блока*/
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; /* Убираем все отступы у всех заголовков*/
+}
+p {
+   margin: 0; /*также убераем отступ текста <p> сверху, слува и справа, снизу оставляем 10*/
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    padding: 0;
+    list-style: none;
+}
+.containerBody {
+    width: 100%;
+    height: 890px;
+    max-height: 100%;
+    background: black;
+}
+.containerHeader{
+    width: 100%;
+    height: 50px;
+    /* position: absolute; */
+    position: absolute; /*Закрепляет по верх элементов (вторым слоем)*/
+    width: 100%; /*ширина на весь экран*/
+    top: 0; /*позиция высота 0*/
+    left: 0; /* позиция слева 0*/
+    z-index: 1000; /* по верх всех элементов*/
+
+}
+
+.home{
+    background:#008197 url(../img/site/home_font.jpg) left /cover;
+    height: 890px;
+    max-height: 100%;
+}
+.homeLogo{
+    height: 50%;
+}
+.honeConecting {
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+}

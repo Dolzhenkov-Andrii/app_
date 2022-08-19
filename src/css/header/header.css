@@ -1,0 +1,69 @@
+
+/* ----------------
+    Header
+=================*/
+.header{
+    padding: 15px 0 0; /*Оцтупы в сверху и снизу 30px left and right 0px*/
+    height: 50px; /*Высота шапки (Header)*/
+    /*background-color: rgba(255, 255, 255, 0.5) ; /*Цвет фона шапки (Header)*/
+    opacity: 5; /*Делает прозрачность фона (90% видимости) */
+    display: flex;
+    justify-content: space-between;
+}
+.headerLabel, .headerLabel >h1 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.headerLabel > h1 {
+    color: #ff0000;
+}
+.headerLabel > h2 {
+    color: #ffffff;
+}
+.headerLabel {
+    padding-right: 150px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius:15px 0 0 15px;
+}
+/* ----------------
+Nav
+=================*/
+.nav {
+    align-items: center; /*Размещает блоки внутри nav по центру*/
+    display: flex; /*все блоки в нутри header_inner буду работать по flex*/
+    justify-content: space-between; /*Значение flax  распологает содержимое header_inner на равные растояния друг от друга*/
+    font-size:  14px; /*Размер шрифта для навигации*/
+    font-weight: 400;/*стиля шрифта 400 = Regular для Open Sans*/
+    text-transform: uppercase; /*Делает буквы большие (ВСЕ БУКВЫ ЗАГЛАВНЫЕ)*/
+    width: 20%;
+    /* margin-left: 30px; */
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius:0 15px 15px 0;
+}
+.nav_link{
+    margin-left: 10px; /*Оцтуп у каждой ссылки с лево*/
+    margin-right: 10px; /*Оцтуп у каждой ссылки с права*/
+    color: #ffffff; /*Цвет шрифта для ссылок*/
+    text-decoration: none; /*Убирает подчеркивание под ссылками*/
+    transition: .1s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
+    background-color: rgba(255, 255, 255, 0.425);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+
+
+.nav_link:hover {
+    color: rgba(255, 14, 14, 0.959); /*Цвет шрифта для ссылок при навидение*/
+    background-color: rgb(255, 255, 255);
+
+}
+.nav_link:first-child {
+    margin-left: 10px; /*Делает оцтуп у первой ссылки nav_link*/
+}
+.nav_link:last-child {
+    margin-right: 10px; /*Делает оцтуп у последней ссылки nav_link*/
+}
+
