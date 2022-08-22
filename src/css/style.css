@@ -17,6 +17,9 @@ button {
     background-color: #00000000;
     border: 0;
 }
+input, input:focus{
+    border: none;
+}
 *,
 *:before,
 *:after {
@@ -44,7 +47,7 @@ ul, li {
 }
 .containerHeader{
     width: 100%;
-    height: 50px;
+    height: 80px;
     /* position: absolute; */
     position: absolute; /*Закрепляет по верх элементов (вторым слоем)*/
     width: 100%; /*ширина на весь экран*/

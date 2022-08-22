@@ -19,13 +19,17 @@
     color: #ff0000;
 }
 .headerLabel > h2 {
-    color: #ffffff;
+    color: #00000075;
 }
 .headerLabel {
-    padding-right: 150px;
-    padding-left: 10px;
-    background-color: rgba(0, 0, 0, 0.329);
-    border-radius:15px 0 0 15px;
+    margin-right: 80px;
+    padding:0 10px;
+    /* background-color: rgba(0, 0, 0, 0.329); */
+    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.986) 65%);
+    height: 55px;
+    border-radius:0 15px 0 15px;
+    margin-top: 10px;
+    font-size:  25px;
 }
 /* ----------------
 Nav
@@ -38,26 +42,34 @@ Nav
     font-weight: 400;/*стиля шрифта 400 = Regular для Open Sans*/
     text-transform: uppercase; /*Делает буквы большие (ВСЕ БУКВЫ ЗАГЛАВНЫЕ)*/
     width: 20%;
+    margin-left: 80px;
+    height: 50px;
     /* margin-left: 30px; */
-    background-color: rgba(0, 0, 0, 0.486);
-    border-radius:0 15px 15px 0;
+    /* background-color: rgba(0, 0, 0, 0.486); */
+    /* border-radius:0 15px 15px 0; */
+
+
 }
 .nav_link{
     margin-left: 10px; /*Оцтуп у каждой ссылки с лево*/
     margin-right: 10px; /*Оцтуп у каждой ссылки с права*/
-    color: #ffffff; /*Цвет шрифта для ссылок*/
+    color: rgb(51, 51, 51); /*Цвет шрифта для ссылок*/
     text-decoration: none; /*Убирает подчеркивание под ссылками*/
-    transition: .1s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
-    background-color: rgba(255, 255, 255, 0.425);
-    border-radius: 5px;
-    padding: 2px;
+    transition: .2s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
+    padding: 5px 10px;
+    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(241, 241, 241) 99%);
+    border-top: solid;
+    border-color: #ffffff;
+    border-radius: 1px;
+    padding-bottom: 5px;
 }
 
 
 
 .nav_link:hover {
-    color: rgba(255, 14, 14, 0.959); /*Цвет шрифта для ссылок при навидение*/
-    background-color: rgb(255, 255, 255);
+    color: rgba(255, 14, 14, 0.959);
+    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
+    border-radius: 17px 2px 17px 2px;
 
 }
 .nav_link:first-child {
