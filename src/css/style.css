@@ -14,9 +14,26 @@ body{
 }
 button {
     font-style: none;
-    background-color: #00000000;
     border: 0;
+    color: rgb(51, 51, 51); /*Цвет шрифта для ссылок*/
+    text-decoration: none; /*Убирает подчеркивание под ссылками*/
+    transition: .2s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
+    padding: 5px 20px;
+    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(231, 231, 231) 99%);
+    border-top: solid;
+    border-color: #ffffff;
+    border-radius: 1px;
+    padding-bottom: 5px;
+    font-size: 14px;/*Задаем размер шрифта*/
+    font-weight: 400;
+    text-transform: uppercase
 }
+button:hover {
+    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
+    border-radius: 2px 17px 2px 17px;
+    color: rgba(255, 14, 14, 0.959);
+}
+
 input, input:focus{
     border: none;
 }

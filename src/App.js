@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Modal from "./components/Modal";
 import Registration from "./components/Registration";
+import Authorization from "./components/Authorization";
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
     <div className="App">
       {/* <Modal/> */}
       <Header />
-      {/* <Home /> */}
-      <Registration/>
+      <Home />
+      {/* <Registration/> */}
+      {/* <Authorization/> */}
       <Footer />
     </div>
   );

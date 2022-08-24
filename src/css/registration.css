@@ -53,28 +53,17 @@
 }
 
 .reg_form_input_button{
-    color: rgb(51, 51, 51); /*Цвет шрифта для ссылок*/
-    text-decoration: none; /*Убирает подчеркивание под ссылками*/
-    transition: .1s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
-    padding: 5px 20px;
-    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(236, 236, 236) 99%);
-    border-top: solid;
-    border-color: #ffffff;
-    border-radius: 1px;
-    padding-bottom: 5px;
     font-size: 15px;/*Задаем размер шрифта*/
     font-weight: 400;
     text-transform: uppercase
 }
-.reg_form_input_button:hover {
+/* .reg_form_input_button:hover {
     background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
     border-radius: 2px 17px 2px 17px;
     color: rgba(255, 14, 14, 0.959);
-}
+} */
 
 .reg_form_input_style{
-    margin-left: 10px; /*Оцтуп у каждой ссылки с лево*/
-    margin-right: 10px; /*Оцтуп у каждой ссылки с права*/
     color: rgba(51, 51, 51, 0.432); /*Цвет шрифта для ссылок*/
     text-decoration: none; /*Убирает подчеркивание под ссылками*/
     transition: .1s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
@@ -93,77 +82,3 @@
     background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
     border-radius: 15px 2px 15px 2px;
 }
-
-/*
-.containerReg_img_slise {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(228, 228, 228) 80%);
-    height: 890px;
-    max-height: 100%;
-    right: 0;
-}
-
-
-.containerReg_form {
-    display: flex;
-    justify-content: left;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0), rgb(228, 228, 228) 60%);
-    width: 20%;
-    height: 890px;
-}
-
-
-
-.reg_form_status {
-    width: 30%;
-}
-
-.reg_form_input {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    text-align: center;
-    border-top: 5px solid;
-    border-color: rgb(255, 255, 255);
-    background: rgba(202, 202, 202, 0.726);
-    border-radius: 0 0 25px 25px;
-    height: max-content;
-    align-items: center;
-    padding: 20px;
-}
-
-.reg_form_input_columns {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    text-align: center;
-    margin: 25px 0;
-    height: 250px;
-    color: rgb(66, 66, 66);
-    padding: 5px 10px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(241, 241, 241) 99%);
-    border-top: solid;
-    border-color: #ffffff;
-    border-radius: 1px;
-    margin:25px 0 35px 0;
-}
-
-
-.reg_form_input_title,
-.reg_form_input_button {
-    color: rgb(66, 66, 66);
-    padding: 5px 10px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(241, 241, 241) 99%);
-    border-top: solid;
-    border-color: #ffffff;
-    border-radius: 1px;
-    padding-bottom: 5px;
-    padding-top: 2px;
-}
-
-.reg_form_input_style {
-    border-radius: 5px;
-    text-align: center;
-    padding: 2px;
-    margin: 5px 0;
-} */

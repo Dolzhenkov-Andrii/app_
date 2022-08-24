@@ -1,70 +1,65 @@
-.singIn {
+.containerSingIn{
+    height: 300px;
+    width:400px;
+    background-color: rgba(245, 245, 245, 0.288);
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.singInContent {
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.301);
-    border-radius: 15px;
-    min-width: 250px;
-}
-.inputContent {
-    background-color: rgba(0, 0, 0, 0.603);
-    border-radius: 15px;
-    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
-    margin-top: 5px;
-}
-.inputContent > h2, p {
-    margin: 5px;
-
+    border-top: solid;
+    border-color: #c2c2c2;
+    border-radius: 1px;
 }
 
-.singInInput{
-    border-radius: 10px;
-    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
-    font-size: 14px;/*Задаем размер шрифта*/
-    color: #ffffff; /*Задаем свет шрифта*/
-    font-weight: 400;  /* жжирность шрифта*/
-    background-color: rgba(0, 0, 0, 0.603);
-    text-align: center;
-}
-
-.singInButton {
-    background-color: rgba(0, 0, 0, 0.603);
-    border-radius: 15px;
-    margin: 0;/*Убирает стандартные оцтупы*/
-    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
-    font-size: 14px;/*Задаем размер шрифта*/
-    color: #ffffff; /*Задаем свет шрифта*/
-    font-weight: 400;  /* жжирность шрифта*/
-    display: flex;
-    justify-content: center;
+.singIn{
+    /* height: 150px; */
     width: 100%;
-    padding: 10px 0;
-    margin-top: 10px;
+    /* background-color: rgb(150, 150, 150); */
 }
-.singInButton:hover {
-    background-color: rgb(255, 255, 255);
-    color: #ff0000; /*Задаем свет шрифта*/
-}
-.changeContent {
+
+.singInForm {
+    /* height: 200px; */
     display: flex;
     justify-content: space-between;
-    padding-bottom: 5;
-    margin-top: 15px;
+    flex-direction: column;
+}
+.sItitle{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-end; */
 }
 
-.singIn_link {
-    font-family: 'Open Sans', sans-serif;/*Задаем шрифт для body*/
-    font-size: 14px;/*Задаем размер шрифта*/
-    color: #000000; /*Задаем свет шрифта*/
-    font-weight: 400;  /* жжирность шрифта*/
-    display: flex;
-    justify-content: center;
+.title{
+    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(223, 223, 223) 99%);
+    border-top: solid;
+    border-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    padding: 2px 10px;
+    text-transform: uppercase;
+    height: 50px;
 }
-.singIn_link:hover {
-    color:rgba(255, 0, 0, 0.842);
-    text-decoration:underline;
+.toRegister {
+    height: 40px;
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.sIforms{
+    width: 100%;
+    margin: 0;
+    height: 40px;
+    border-radius: 2px 2px 15px 15px;
+}
+
+.sIoptionalMenu {
+    display: flex;
+    justify-content: space-between;
+}
+.singInText{
+    color: #c2c2c2;
+}
+.input_checkbox{
+    margin-right: 5px;
+}
+.sIhref:hover {
+    color: #ff9a9a98;
 }

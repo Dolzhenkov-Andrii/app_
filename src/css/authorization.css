@@ -1,0 +1,13 @@
+.containerAuthorization {
+    width: 100%;
+    height: 890px;
+    max-height: 100%;
+    background: rgb(228, 228, 228);
+    position: relative;
+    display: flex;
+    background: rgba(158, 158, 158, 0.568) url(../img/site/singin_fonimg.jpg) top /cover;
+    /* background: rgb(0, 0, 0); */
+}
+.authorizationContent{
+    margin: 20%;
+}

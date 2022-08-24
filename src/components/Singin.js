@@ -5,26 +5,23 @@ import "../css/singin.css"
 
 function Singin() {
     return (
-        <div className="singIn">
-            <div className="singInContent">
-                {/* <form action="" method="POST" className="form_conectingUser">
-                </form> */}
-                <div className="inputContent">
-                    <h2>
-                        Sing in you accaunt
-                    </h2>
-                    <p>• Login / email •</p>
-                    <input className="singInInput" type="text" username="username" required />
-                    <p>• Password •</p>
-                    <input className="singInInput" type="text" email="email" required />
+        <div className="containerSingIn">
+            <div className="singIn sItitle">
+                <h1 className="title">Sign In </h1>
+                <button className="toRegister">Register</button>
+            </div>
+            <div className="singIn singInForm">
+                <input className="reg_form_input_style sIforms" type="text" login="login" defaultValue="Nikname or email" required />
+                <input className="reg_form_input_style sIforms" type="text" password="password" defaultValue="Password" required />
+                <button className="toRegister sIforms">Get started</button>
+            </div>
+            <div className="singIn sIoptionalMenu">
+                <div className="sIoptionalMenu">
+                    <input className="input_checkbox" type="checkbox" rem="remember" required />
+                    <p className="singInText">Remember me</p>
                 </div>
-                <button className="singInButton" type="submit" value="registraitions">
-                    <p>LOGIN</p>
-                </button>
-                <div className="changeContent">
-                    <a className="singIn_link" href="/new_acaunt">new acaunt</a>
-                    <h4>or</h4>
-                    <a className="singIn_link" href="##">restore password</a>
+                <div>
+                    <a href="###" className="singInText sIhref">Lost your password?</a>
                 </div>
             </div>
         </div>
