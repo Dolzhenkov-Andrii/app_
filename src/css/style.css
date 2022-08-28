@@ -153,9 +153,6 @@ ul, li {
     justify-content: space-evenly;
 }
 .userMenuLink{
-
-}
-.userMenuLink{
     color: rgb(51, 51, 51); /*Цвет шрифта для ссылок*/
     text-decoration: none; /*Убирает подчеркивание под ссылками*/
     transition: .2s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
@@ -192,3 +189,4 @@ ul, li {
     border-radius:25px 25px 0 0;
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(241, 241, 241) 99%);
 }
+

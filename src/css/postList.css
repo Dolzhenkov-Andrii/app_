@@ -1,0 +1,45 @@
+
+.containerPostList {
+    height: 100%;
+    width: 100%;
+    border: solid;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.185);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.containerPost {
+    margin: 15px;
+    padding: 5px;
+    height: 370px;
+    width: 590px;
+    border: solid;
+    border-color: #00ffff;
+    background-color: rgba(252, 255, 46, 0.281);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postTitle{
+    border: solid;
+    border-color: #00ffff;
+}
+.postImg{
+    border: solid;
+    border-color: #00ffff;
+}
+.postText{
+    border: solid;
+    border-color: #00ffff;
+}
+.postInfo{
+    display: flex;
+    justify-content: space-between;
+
+    border: solid;
+    border-color: #00ffff;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import PostList from "./PostList";
 import Singin from "./Singin";
 
 
@@ -47,7 +48,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="main">
-
+                    <PostList/>
                 </div>
             </div>
         </body>
