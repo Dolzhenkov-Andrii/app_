@@ -1,19 +1,31 @@
 import React from "react";
 import '../css/header/header.css';
 
-function Header() {
+function Header(props) {
     return (
         <header className="containerHeader">
             <div className="header">
-                <nav className="nav">
-                    <a className="nav_link" href="/">home</a>
-                    <a className="nav_link" href="###">search</a>
-                    <a className="nav_link" href="/our_blog">our blog</a>
-                </nav>
                 <div className="headerLabel">
                     <h1>Y</h1><h2>our</h2>
-                    <h1>T</h1><h2>ravel</h2>
-                    <h1>W</h1><h2>world</h2>
+                    <h1>B</h1><h2>log</h2>
+                </div>
+                {/* <nav className="nav">
+                    <a className="nav_link" href="/">our blog</a>
+                    <a className="nav_link" href="###">novelties</a>
+                    <a className="nav_link" href="/our_blog">About Us</a>
+                </nav> */}
+                <nav className="nav">
+                    <a className="nav_link" href="/">home</a>
+                    <a className="nav_link" href="###">novelties</a>
+                    <a className="nav_link" href="/our_blog">new post</a>
+                    <a className="nav_link" href="/our_blog">message</a>
+                    <a className="nav_link" href="/our_blog">profile</a>
+                </nav>
+                <div className="headerLabel userUse">
+                    <h3>{props.user.username}</h3>
+                    <div className="userAvatar">
+                        <h5>{props.user.avatar}</h5>
+                    </div>
                 </div>
             </div>
         </header>

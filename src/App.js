@@ -9,10 +9,12 @@ import Authorization from "./components/Authorization";
 
 function App() {
 
+  let user = {id:'1', username:'oscur1k', avatar:"avatr"}
+
   return (
     <div className="App">
       {/* <Modal/> */}
-      <Header />
+      <Header user={user}/>
       <Home />
       {/* <Registration/> */}
       {/* <Authorization/> */}

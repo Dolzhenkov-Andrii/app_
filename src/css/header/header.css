@@ -4,16 +4,22 @@
 =================*/
 .header{
     padding: 15px 0 0; /*Оцтупы в сверху и снизу 30px left and right 0px*/
-    height: 50px; /*Высота шапки (Header)*/
+    height: 85px; /*Высота шапки (Header)*/
     /*background-color: rgba(255, 255, 255, 0.5) ; /*Цвет фона шапки (Header)*/
     opacity: 5; /*Делает прозрачность фона (90% видимости) */
+    /* position: fixed; */
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    /* background-color: #000000; */
 }
+.headerScrol{
+}
+
 .headerLabel, .headerLabel >h1 {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    text-align:center;
 }
 .headerLabel > h1 {
     color: #ff0000;
@@ -22,15 +28,31 @@
     color: #00000075;
 }
 .headerLabel {
-    margin-right: 80px;
-    padding:0 10px;
+    margin:0 20px;
+    padding:0 13px;
     /* background-color: rgba(0, 0, 0, 0.329); */
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.986) 65%);
-    height: 55px;
+    height: 60px;
+    width: 215px;
     border-radius:0 15px 0 15px;
-    margin-top: 10px;
     font-size:  25px;
 }
+
+.userUse{
+    color: #00000075;
+    padding: 5px;
+    border-radius:15px 0 15px 0;
+}
+.userAvatar{
+    margin:0 15px;
+    padding:0 5px;
+    height: 50px;
+    width: 70px;
+    border: solid;
+    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(196, 195, 195, 0.767) 65%);
+    border-color: #00d9ff;
+}
+
 /* ----------------
 Nav
 =================*/
@@ -41,8 +63,7 @@ Nav
     font-size:  14px; /*Размер шрифта для навигации*/
     font-weight: 400;/*стиля шрифта 400 = Regular для Open Sans*/
     text-transform: uppercase; /*Делает буквы большие (ВСЕ БУКВЫ ЗАГЛАВНЫЕ)*/
-    width: 20%;
-    margin-left: 80px;
+    width: 450px;
     height: 50px;
     /* margin-left: 30px; */
     /* background-color: rgba(0, 0, 0, 0.486); */
@@ -63,7 +84,6 @@ Nav
     border-radius: 1px;
     padding-bottom: 5px;
 }
-
 
 
 .nav_link:hover {
