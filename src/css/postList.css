@@ -88,3 +88,16 @@
 .socialMedia{
     border-radius: 50px;
 }
+
+.sliderPosts{
+    display: flex;
+    justify-content: center;
+
+}
+.sliderP{
+    margin: 5px;
+}
+.sliderStyleButton{
+    padding: 3px 20px;
+
+}

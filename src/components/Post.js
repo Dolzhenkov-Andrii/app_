@@ -3,13 +3,14 @@ import "../css/postList.css"
 
 
 function Post(props) {
+    // console.log(props.post)
     return (
         <div className="containerPost">
             <div className="postInfo">
                 <div className="postOwner">
                     <div className="userAvatar"></div>
                     <div className="postOwnerInfo">
-                        <h3>{props.post.username}</h3>
+                        <h3>{props.post.owner.username}</h3>
                         <h5>{props.post.creation_date}</h5>
                     </div>
                 </div>
@@ -20,7 +21,7 @@ function Post(props) {
                     <h2>{props.post.title}</h2>
                 </div>
                 <div className="postImg">
-                    <h1>{props.post.photo}</h1>
+                    {/* <h1>{props.post.photo}</h1> */}
                 </div>
                 <div className="postText">
                     <h3>{props.post.text}</h3>
