@@ -1,6 +1,6 @@
-import React from "react";
+
+import React, {useEffect, useState} from "react";
 import PostList from "./PostList";
-import Singin from "./Singin";
 
 
 function Home() {

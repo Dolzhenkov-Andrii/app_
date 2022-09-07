@@ -21,6 +21,7 @@ function Post(props) {
                     <h2>{props.post.title}</h2>
                 </div>
                 <div className="postImg">
+                    <img src={require('../img/post_img/bimg_1.png')} alt='error' height={140} />
                     {/* <h1>{props.post.photo}</h1> */}
                 </div>
                 <div className="postText">

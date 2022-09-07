@@ -101,3 +101,10 @@
     padding: 3px 20px;
 
 }
+.pagination > a{
+    color: black;
+}
+
+.pagination:hover{
+    border-radius: 50%;
+}
