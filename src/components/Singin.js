@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/singin.css"
 import axios from "axios";
+import Home from "./Home";
 
 
 function Singin() {
@@ -8,7 +9,7 @@ function Singin() {
     // const [pass, setPassword] = useState("Password")
     const [login, setLogin] = useState()
     const [pass, setPassword] = useState()
-    const [result, setResult] = useState()
+    const [result, setResult] = useState(null)
 
 
     const authorizationFORM = (e) => {
@@ -20,6 +21,11 @@ function Singin() {
         axios.post('http://127.0.0.1:5050/api/authorization', autFORM)
         .then(response => {
             console.log(response)
+            console.log(response.data['1'])
+            if(response.data['1']!='NO'){
+                console.log(response.data)
+            }
+
         })
         .catch(error => {
             console.log(error)
@@ -29,10 +35,14 @@ function Singin() {
 
 
     return (
+
         <div className="containerSingIn">
+            {result}
             <div className="singIn sItitle">
                 <h1 className="title">Sign In </h1>
-                <button className="toRegister">Register</button>
+                <a href="/regist">
+                <button  className="toRegister">Register</button>
+                </a>
             </div>
             <div className="singIn singInForm">
                 <form>
@@ -57,7 +67,7 @@ function Singin() {
                     <p className="singInText">Remember me</p>
                 </div>
                 <div>
-                    <a href="###" className="singInText sIhref">Lost your password?</a>
+                    <a href="/null" className="singInText sIhref">Lost your password?</a>
                 </div>
             </div>
         </div>

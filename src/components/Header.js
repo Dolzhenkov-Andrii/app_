@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/header/header.css';
 
+
 function Header(props) {
     return (
         <header className="containerHeader">
@@ -15,11 +16,11 @@ function Header(props) {
                     <a className="nav_link" href="/our_blog">About Us</a>
                 </nav> */}
                 <nav className="nav">
-                    <a className="nav_link" href="/">home</a>
-                    <a className="nav_link" href="###">novelties</a>
-                    <a className="nav_link" href="/our_blog">new post</a>
-                    <a className="nav_link" href="/our_blog">message</a>
-                    <a className="nav_link" href="/our_blog">profile</a>
+                    <a className="nav_link" href="/home">home</a>
+                    <a className="nav_link" href="/null">novelties</a>
+                    <a className="nav_link" href="/null">new post</a>
+                    <a className="nav_link" href="/null">message</a>
+                    <a className="nav_link" href="/null">profile</a>
                 </nav>
                 <div className="headerLabel userUse">
                     <h3>{props.user.username}</h3>

@@ -11,7 +11,7 @@ function Pagination({ sizeList, allList, paigeNumberList }) {
     return (
         <div className="sliderPosts">{pageNumbers.map(number => (
             <li className='pagination' key={number}>
-                <a href='#' className='nav_link' onClick={() => paigeNumberList(number)}>{number}</a>
+                <button className='nav_link' onClick={() => paigeNumberList(number)}>{number}</button>
             </li>
         ))}</div>
     )
