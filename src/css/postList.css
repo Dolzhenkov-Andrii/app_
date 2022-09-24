@@ -27,7 +27,7 @@
 .containerPost {
     margin: 15px;
     padding: 5px;
-    height: 370px;
+    height: 680px;
     width: 47%;
     border-top: solid;
     border-color: aliceblue;
@@ -108,3 +108,13 @@
 .pagination:hover{
     border-radius: 50%;
 }
+
+.postPage{
+    background-color: blanchedalmond;
+    width: 100%;
+    min-height: 795px;
+    height: max-content;
+    margin: 5px;
+    color: black;
+}
+

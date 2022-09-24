@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../css/header/header.css';
+import NavGuest from "./navigate/NavGuest";
+import NavUser from "./navigate/NavUser"
+import UserIcon from "./UserIcon";
+import { useAuth } from "../hook/useAuth";
 
+function Header() {
 
-function Header(props) {
+    const [navIn, setNavIn] = useState((<NavGuest/>))
+    const [userInfo, setUserInfo] = useState(null)
+    const {user} = useAuth();
+
+    useEffect(()=>{
+        console.log('Heder', user)
+        if(user){
+            setUserInfo((<UserIcon name={user['name']} username={user['username']}/>))
+            setNavIn(<NavUser />)
+        } else {
+            setNavIn(null)
+            setNavIn(<NavGuest />)
+        }
+    }, [user])
+
     return (
         <header className="containerHeader">
             <div className="header">
@@ -10,24 +29,8 @@ function Header(props) {
                     <h1>Y</h1><h2>our</h2>
                     <h1>B</h1><h2>log</h2>
                 </div>
-                {/* <nav className="nav">
-                    <a className="nav_link" href="/">our blog</a>
-                    <a className="nav_link" href="###">novelties</a>
-                    <a className="nav_link" href="/our_blog">About Us</a>
-                </nav> */}
-                <nav className="nav">
-                    <a className="nav_link" href="/home">home</a>
-                    <a className="nav_link" href="/null">novelties</a>
-                    <a className="nav_link" href="/null">new post</a>
-                    <a className="nav_link" href="/null">message</a>
-                    <a className="nav_link" href="/null">profile</a>
-                </nav>
-                <div className="headerLabel userUse">
-                    <h3>{props.user.username}</h3>
-                    <div className="userAvatar">
-                        <h5>{props.user.avatar}</h5>
-                    </div>
-                </div>
+                {navIn}
+                {userInfo}
             </div>
         </header>
     )

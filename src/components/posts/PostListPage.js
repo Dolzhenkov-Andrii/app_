@@ -1,5 +1,5 @@
 import React from 'react'
-import Post from "./Post";
+import PostIcon from "./PostIcon";
 function PostListPage({ posts, loading }) {
 
     if (loading) {
@@ -10,8 +10,8 @@ function PostListPage({ posts, loading }) {
 
     return (
         <div className="postList" >
-            {posts.map((post, key) =>
-                <Post post={post[1]} key={key} />
+            {posts.map((post) =>
+                <PostIcon post={post} key={post.id} />
             )}
         </div>
     )

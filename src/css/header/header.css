@@ -99,3 +99,14 @@ Nav
     margin-right: 10px; /*Делает оцтуп у последней ссылки nav_link*/
 }
 
+.active {
+    color: rgba(255, 14, 14, 0.959);
+    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
+    border-radius: 17px 2px 17px 2px;
+}
+
+.activeLink {
+    color: rgba(255, 14, 14, 0.959);
+    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
+    border-radius: 17px 2px 17px 2px;
+}

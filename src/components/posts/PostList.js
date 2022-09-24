@@ -1,10 +1,12 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "../css/postList.css"
+import "../../css/postList.css"
+import GetCookie from "../cookies/getCookie";
 import Pagination from "./Pagination";
 import PostListPage from "./PostListPage";
-
+import SetCookie from "../cookies/setCookie";
+// const API_URL = process.env.API_URL
 
 
 function PostList() {
@@ -14,11 +16,31 @@ function PostList() {
     const [sizeList] = useState(6)
 
     useEffect(() => {
+        const getTokin = async () => {
+            await axios.get('http://127.0.0.1:5050/api/refresh_token', {headers:{refresh_token: GetCookie('refresh_token')}}).then(response => {
+                console.log("Finaly = GOOD!!!")
+                console.log("get_1 = response: ",response.data)
+                SetCookie('access_token', response.data.access_token)
+                SetCookie('refresh_token', response.data.refresh_token)
+                getPosts()
+            }).catch(err => {
+                console.log(err)
+            })
+        }
         const getPosts = async () => {
             setLoading(true)
-            const response = await axios.get('http://127.0.0.1:5050/api/posts/1')
-            setPosts(Object.entries(response.data))
-            setLoading(false)
+            console.log(GetCookie('refresh_token'))
+            console.log(GetCookie('access_token'))
+            await axios.get('http://127.0.0.1:5050/api/posts/1', {headers:{access_token: GetCookie('access_token')}}).then(response => {
+                console.log("Finaly = GOOD!!!")
+                setPosts(response.data['posts'])
+                console.log("get_1 = response: ",response.data)
+                setLoading(false)
+            }).catch(err => {
+                console.log(`Finaly = ${err} 1!!!`)
+                getTokin()
+            })
+
         }
 
         getPosts()

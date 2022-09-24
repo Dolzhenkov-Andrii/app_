@@ -1,33 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './css/style.css';
-import Footer from './components/Footer';
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Modal from "./components/Modal";
-import Registration from "./components/Registration";
-import Authorization from "./components/Authorization";
-
-import { Route, Routes } from 'react-router-dom'
-
-
+import Home from "./pages/Home";
+import Registration from "./pages/Registration";
+import Authorization from "./pages/Authorization";
+import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout";
+import { Navigate, Route, Routes } from 'react-router-dom'
+import RequireAuth from "./hoc/RequiredAuth";
+import { useAuth } from "./hook/useAuth";
+import Post from "./components/posts/Post";
+import PostList from "./components/posts/PostList";
+import Page404 from "./components/errors/Page404";
 function App() {
+  const [indexRender, setIndexRender] = useState();
+  const { user } = useAuth();
+  console.log(user)
+  useEffect(() => {
+    if (user) {
+      setIndexRender(<RequireAuth>
+        <Home />
+      </RequireAuth>)
+    } else {
+      setIndexRender(<Authorization />)
+    }
 
-  const user = { id: '1', username: 'oscur1k', avatar: "avatr" }
-
-
+  }, [user])
+  const register = !user?<Registration />:<Navigate to="Bloc" replace />
 
   return (
-    <div className="App">
-      {/* <Modal/> */}
-      <Header user={user} />
-      <Routes>
-        <Route path="/" exact element={<Authorization/>}/>
-        <Route path="/home" exact element={<Home/>}/>
-        <Route path="/regist" exact element={<Registration/>}/>
-      </Routes>
-      <Footer />
-    </div>
-  );
-}
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index="/*" element={indexRender} >
+          <Route index element={<Page404 />} />
+          <Route path="posts" element={<PostList />} />
+          <Route path="posts/post/:id" element={<Post />} />
+        </Route>
+        <Route path="regist" element={register} />
+        <Route path="login" element={<Navigate to="/" replace />}/>
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  )
+};
 
 export default App;
