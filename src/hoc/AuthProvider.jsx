@@ -15,6 +15,7 @@ export const AuthProvider = ({children}) => {
         collBack();
     }
 
+    
     const value = {user, signIn, signOut}
 
     return <AuthContext.Provider value={value}>

@@ -16,7 +16,7 @@ function PostList() {
     const [sizeList] = useState(6)
 
     useEffect(() => {
-        const getTokin = async () => {
+        const getToken = async () => {
             await axios.get('http://127.0.0.1:5050/api/refresh_token', {headers:{refresh_token: GetCookie('refresh_token')}}).then(response => {
                 console.log("Finaly = GOOD!!!")
                 console.log("get_1 = response: ",response.data)
@@ -38,7 +38,7 @@ function PostList() {
                 setLoading(false)
             }).catch(err => {
                 console.log(`Finaly = ${err} 1!!!`)
-                getTokin()
+                getToken()
             })
 
         }

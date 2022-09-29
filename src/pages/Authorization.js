@@ -24,9 +24,10 @@ function Authorization() {
         event.preventDefault();
         const form = event.target;
         const user = {
-            login: form.login.value,
+            username: form.login.value,
             password: form.password.value
         };
+
         axios.post(API_URL+'authorization', user)
             .then(response => {
                 console.log(response)
