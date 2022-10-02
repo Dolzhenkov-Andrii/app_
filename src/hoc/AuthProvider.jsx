@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createContext, useState } from "react";
 import GetCookie from "../components/cookies/getCookie";
 
@@ -15,7 +16,7 @@ export const AuthProvider = ({children}) => {
         collBack();
     }
 
-    
+
     const value = {user, signIn, signOut}
 
     return <AuthContext.Provider value={value}>

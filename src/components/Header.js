@@ -7,18 +7,16 @@ import { useAuth } from "../hook/useAuth";
 
 function Header() {
 
-    const [navIn, setNavIn] = useState((<NavGuest/>))
+    const [navIn, setNavIn] = useState()
     const [userInfo, setUserInfo] = useState(null)
     const {user} = useAuth();
 
     useEffect(()=>{
-        console.log('Heder', user)
         if(user){
             setUserInfo((<UserIcon name={user['name']} username={user['username']}/>))
             setNavIn(<NavUser />)
         } else {
             setNavIn(null)
-            setNavIn(<NavGuest />)
         }
     }, [user])
 

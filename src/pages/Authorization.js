@@ -25,13 +25,12 @@ function Authorization() {
         const form = event.target;
         const user = {
             username: form.login.value,
-            password: form.password.value
+            password: form.password.value,
+            remember_me: true
         };
 
-        axios.post(API_URL+'authorization', user)
+        axios.post(API_URL+'/authorization', user)
             .then(response => {
-                console.log(response)
-                console.log(response.data)
                 if (response.data['user']) {
                     SetCookie('access_token', response.data.access_token)
                     SetCookie('refresh_token', response.data.refresh_token)
@@ -42,7 +41,6 @@ function Authorization() {
             })
             .catch(error => {
                 setResult(error.response.data)
-                console.log(error)
             })
 
     }

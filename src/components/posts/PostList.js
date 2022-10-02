@@ -6,6 +6,8 @@ import GetCookie from "../cookies/getCookie";
 import Pagination from "./Pagination";
 import PostListPage from "./PostListPage";
 import SetCookie from "../cookies/setCookie";
+import RemoveCookie from "../cookies/removeCookie";
+import Posts from "../../services/postsRequest";
 // const API_URL = process.env.API_URL
 
 
@@ -16,31 +18,27 @@ function PostList() {
     const [sizeList] = useState(6)
 
     useEffect(() => {
-        const getToken = async () => {
-            await axios.get('http://127.0.0.1:5050/api/refresh_token', {headers:{refresh_token: GetCookie('refresh_token')}}).then(response => {
-                console.log("Finaly = GOOD!!!")
-                console.log("get_1 = response: ",response.data)
-                SetCookie('access_token', response.data.access_token)
-                SetCookie('refresh_token', response.data.refresh_token)
-                getPosts()
-            }).catch(err => {
-                console.log(err)
-            })
-        }
-        const getPosts = async () => {
+        // const getToken = async () => {
+        //     await axios.get('http://127.0.0.1:5050/api/refresh_token', {headers:{refresh_token: GetCookie('refresh_token')}}).then(response => {
+        //         RemoveCookie('access_token')
+        //         RemoveCookie('refresh_token')
+        //         SetCookie('access_token', response.data.access_token)
+        //         SetCookie('refresh_token', response.data.refresh_token)
+        //         // getPosts()
+        //     }).catch(err => {
+        //         console.log(err)
+        //     })
+        // }
+        const getPosts = () => {
             setLoading(true)
-            console.log(GetCookie('refresh_token'))
-            console.log(GetCookie('access_token'))
-            await axios.get('http://127.0.0.1:5050/api/posts/1', {headers:{access_token: GetCookie('access_token')}}).then(response => {
-                console.log("Finaly = GOOD!!!")
+            // await axios.get('http://127.0.0.1:5050/api/posts', {headers:{access_token: GetCookie('access_token')}}).then(response => {
+            Posts.getPosts(0,20).then(response => {
                 setPosts(response.data['posts'])
-                console.log("get_1 = response: ",response.data)
                 setLoading(false)
             }).catch(err => {
-                console.log(`Finaly = ${err} 1!!!`)
-                getToken()
+                // getToken()
+                console.log(err)
             })
-
         }
 
         getPosts()

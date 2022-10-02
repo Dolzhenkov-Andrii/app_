@@ -1,6 +1,12 @@
 import React from "react";
 import '../css/registration.css'
+import { useNavigate } from 'react-router-dom'
+
 function Registration() {
+
+    const navigate = useNavigate();
+    const goBack = () => navigate(-1)
+
     return (
         <div className="containerRegistration">
             {/* <div className="containerReg_img">
@@ -21,7 +27,10 @@ function Registration() {
                             <input className="reg_form_input_style" type="text" name="name" placeholder="Your name" required />
                             <input className="reg_form_input_style" type="text" birthday="birthday" placeholder="Your birthday" required />
                         </div>
-                        <button className="reg_form_input_button" type="submit" value="registraitions">done</button>
+                        <div className="back_done">
+                            <button className="reg_form_input_button" onClick={goBack}>Back</button>
+                            <button className="reg_form_input_button" type="submit" value="registraitions">done</button>
+                        </div>
                     </div>
                 </div>
             </div>

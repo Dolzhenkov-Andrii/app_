@@ -82,3 +82,9 @@
     background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
     border-radius: 15px 2px 15px 2px;
 }
+
+.back_done{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
