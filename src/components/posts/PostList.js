@@ -18,25 +18,13 @@ function PostList() {
     const [sizeList] = useState(6)
 
     useEffect(() => {
-        // const getToken = async () => {
-        //     await axios.get('http://127.0.0.1:5050/api/refresh_token', {headers:{refresh_token: GetCookie('refresh_token')}}).then(response => {
-        //         RemoveCookie('access_token')
-        //         RemoveCookie('refresh_token')
-        //         SetCookie('access_token', response.data.access_token)
-        //         SetCookie('refresh_token', response.data.refresh_token)
-        //         // getPosts()
-        //     }).catch(err => {
-        //         console.log(err)
-        //     })
-        // }
+
         const getPosts = () => {
             setLoading(true)
-            // await axios.get('http://127.0.0.1:5050/api/posts', {headers:{access_token: GetCookie('access_token')}}).then(response => {
             Posts.getPosts(0,20).then(response => {
                 setPosts(response.data['posts'])
                 setLoading(false)
             }).catch(err => {
-                // getToken()
                 console.log(err)
             })
         }

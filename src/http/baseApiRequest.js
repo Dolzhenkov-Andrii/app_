@@ -1,6 +1,7 @@
 
 import axios from "axios";
-import Cookies from "js-cookie";
+import GetCookie from "../components/cookies/getCookie";
+import UpdateCookie from "../components/cookies/updateCookie";
 const API_URL = process.env.REACT_APP_API_URL
 
 const $api = axios.create({
@@ -9,7 +10,7 @@ const $api = axios.create({
 })
 
 $api.interceptors.request.use((config) => {
-    config.headers.access_token = Cookies.get('access_token')
+    config.headers.access_token = GetCookie('access_token')
     return config
 })
 
@@ -22,11 +23,10 @@ $api.interceptors.response.use((config) => {
         originalRequest._isRetry = true
         try{
             const response = await axios.get(`${API_URL}/refresh_token`,
-            {headers:{refresh_token: Cookies.get('refresh_token')}})
-            Cookies.remove('access_token')
-            Cookies.remove('refresh_token')
-            Cookies.set('access_token', response.data.access_token)
-            Cookies.set('refresh_token', response.data.refresh_token)
+            {headers:{refresh_token: GetCookie('refresh_token')}})
+            UpdateCookie('access_token', response.data.access_token)
+            UpdateCookie('refresh_token', response.data.refresh_token)
+            console.log('\n\t\tREFRESH-[2]\n')
             return $api.request(originalRequest)
         } catch (e) {
             throw e

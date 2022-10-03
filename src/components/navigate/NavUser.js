@@ -1,18 +1,17 @@
 import React from "react";
-import SetCookie from "../cookies/setCookie";
-import GetCookie from "../cookies/getCookie";
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from "../../hook/useAuth";
+import RemoveCookie from "../cookies/removeCookie";
 
 function NavUser(){
 
     const {signOut} = useAuth();
     const navigate = useNavigate();
     function logOut() {
-        SetCookie('access_token', null)
-        SetCookie('refresh_token', null)
-        SetCookie('user', null)
-        signOut(GetCookie('user'),() => navigate('/', {replace: true}))
+        RemoveCookie('access_token')
+        RemoveCookie('refresh_token')
+        RemoveCookie('user')
+        signOut(() => navigate('/', {replace: true}))
     }
 
     return (

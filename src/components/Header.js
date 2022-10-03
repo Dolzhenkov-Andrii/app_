@@ -16,6 +16,7 @@ function Header() {
             setUserInfo((<UserIcon name={user['name']} username={user['username']}/>))
             setNavIn(<NavUser />)
         } else {
+            setUserInfo(null)
             setNavIn(null)
         }
     }, [user])

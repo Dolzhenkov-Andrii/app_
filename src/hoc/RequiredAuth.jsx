@@ -1,15 +1,18 @@
-import { useLocation, Navigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../hook/useAuth";
-import Cookie from "js-cookie";
 import { decodeToken } from "react-jwt";
-const SECRET_KEY = process.env.REACT_APP_SECRET_KEY
+import GetCookie from "../components/cookies/getCookie";
+import refreshToken from "../services/refreshToken";
+// const SECRET_KEY = process.env.REACT_APP_SECRET_KEY
 
 const RequireAuth = ({children}) => {
     const location = useLocation();
-    const {user} = useAuth();
+    const {user, signOut} = useAuth();
+    const fromPage = location.state?.from?.pathname || '/';
+    const navigate = useNavigate();
 
-    const token = Cookie.get('access_token')
-    const token_date = decodeToken(token)['expiration']
+    const token = GetCookie('access_token')
+    const token_date = decodeToken(token)?.['expiration']
     const now_time_ms = Date.now()
     const tokne_time = String(token_date).replaceAll(' ', 'T')
     const tokne_time_ms = Date.parse(tokne_time.slice(0,-3))
@@ -17,14 +20,14 @@ const RequireAuth = ({children}) => {
     const token_data = new Date(tokne_time_ms)
 
     if(now_time_ms > tokne_time_ms){
+        console.log('\n\t\tREFRESH-[1]\n')
         console.log(`Error: Token expired\n\t ${token_data}`)
-    } else {
-        console.log(`Fine: Token is valid\n\t ${token_data}`)
+        refreshToken().catch(error => {
+            console.log(`Fine: Token is valid\n\t ${token_data}`)
+            signOut(() => navigate(fromPage, {replace: true}))
+        })
     }
-
-    if (!user) {
-        return <Navigate to='/' state={{from: location}} />
-    }
+    console.log()
 
     return children
 }
