@@ -7,7 +7,7 @@ import refreshToken from "../services/refreshToken";
 
 const RequireAuth = ({children}) => {
     const location = useLocation();
-    const {user, signOut} = useAuth();
+    const {signOut} = useAuth();
     const fromPage = location.state?.from?.pathname || '/';
     const navigate = useNavigate();
 
@@ -20,14 +20,11 @@ const RequireAuth = ({children}) => {
     const token_data = new Date(tokne_time_ms)
 
     if(now_time_ms > tokne_time_ms){
-        console.log('\n\t\tREFRESH-[1]\n')
-        console.log(`Error: Token expired\n\t ${token_data}`)
         refreshToken().catch(error => {
             console.log(`Fine: Token is valid\n\t ${token_data}`)
             signOut(() => navigate(fromPage, {replace: true}))
         })
     }
-    console.log()
 
     return children
 }

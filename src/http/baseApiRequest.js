@@ -26,7 +26,6 @@ $api.interceptors.response.use((config) => {
             {headers:{refresh_token: GetCookie('refresh_token')}})
             UpdateCookie('access_token', response.data.access_token)
             UpdateCookie('refresh_token', response.data.refresh_token)
-            console.log('\n\t\tREFRESH-[2]\n')
             return $api.request(originalRequest)
         } catch (e) {
             throw e

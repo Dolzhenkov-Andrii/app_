@@ -1,50 +1,47 @@
 import React, { useState } from "react";
 import '../css/authorization.css'
 import "../css/singin.css"
-import axios from "axios";
 import SetCookie from "../components/cookies/setCookie"
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from "../hook/useAuth";
-const API_URL = process.env.REACT_APP_API_URL
+import authRequest from "../services/authRequest ";
 
 
 function Authorization() {
-    // const [login, setLogin] = useState("Nikname")
-    // const [pass, setPassword] = useState("Password")
-    const [login, setLogin] = useState('oscurik')
-    const [pass, setPassword] = useState('0123456789')
-    const [result, setResult] = useState()
     const navigate = useNavigate();
     const location = useLocation();
     const {signIn} = useAuth();
+    const [login, setLogin] = useState("Nikname")
+    const [pass, setPassword] = useState("Password")
+    const [remember, setRemember] = useState(false)
+    const [result, setResult] = useState()
 
     const fromPage = location.state?.from?.pathname || '/';
+
+    const remember_check_box = ({target: {checked}}) => {
+        setRemember(checked)
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
-        const user = {
+        const auth_form = {
             username: form.login.value,
             password: form.password.value,
-            remember_me: true
+            remember_me: remember
         };
 
-        axios.post(API_URL+'/authorization', user)
-            .then(response => {
-                if (response.data['user']) {
-                    SetCookie('access_token', response.data.access_token)
-                    SetCookie('refresh_token', response.data.refresh_token)
-                    SetCookie('user', JSON.stringify(response.data.user))
-                    setResult(response.data.user.username)
-                    signIn(response.data.user, () => navigate(fromPage, {replace: true}))
-                }
-            })
-            .catch(error => {
-                setResult(error.response.data)
-            })
-
+        authRequest(auth_form).then(response => {
+            if (response.data['user']) {
+                SetCookie('access_token', response.data.access_token)
+                SetCookie('refresh_token', response.data.refresh_token)
+                SetCookie('user', JSON.stringify(response.data.user))
+                signIn(response.data.user, () => navigate(fromPage, {replace: true}))
+            }
+        }).catch(error => {
+            setResult(error.response.data)
+        })
     }
-
 
     return (
         <div className="containerAuthorization">
@@ -76,7 +73,9 @@ function Authorization() {
                     </form>
                     <div className="singIn sIoptionalMenu">
                         <div className="sIoptionalMenu">
-                            <input className="input_checkbox" type="checkbox" rem="remember" required />
+                            <input className="input_checkbox" type="checkbox"
+                            onChange={remember_check_box}
+                            defaultChecked={false} />
                             <p className="singInText">Remember me</p>
                         </div>
                         <div>
