@@ -1,72 +1,47 @@
 .containerRegistration {
     width: 100%;
-    height: 890px;
+    min-height: 100vh;
     max-height: 100%;
     background: rgb(228, 228, 228);
     position: relative;
     display: flex;
     background: rgba(158, 158, 158, 0.568) url(../img/site/registration_img.jpg) right /cover;
-}
-
-.containerReg_form {
-    height: 890px;
-    max-height: 100%;
-    width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.reg_form {
-    background: linear-gradient(0.25turn, #feffff00, #93ceff81 , #ffffff00);
+.reg_form{
+    background: linear-gradient(0.334turn, #ffffff67,#feffff00, #16c1ff6f , #ffffff00, #fdfeff81);
+    border-radius: 50px;
+    width: 40%;
+    min-width: max-content;
+    height: 80vh;
     display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
 }
 
-.reg_form_input{
-    height: 600px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-}
-.reg_form_input_columns{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 60%;
-    width: 250px;
-    align-items: center;
-}
-
-.reg_form_input_title {
+.reg_form_title {
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(236, 236, 236) 99%);
     border-top: solid;
     border-color: rgb(255, 255, 255);
     color: rgb(51, 51, 51);
     padding: 2px 10px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
-.reg_form_input_button{
-    font-size: 15px;/*Задаем размер шрифта*/
-    font-weight: 400;
-    text-transform: uppercase
+.reg_form_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
 }
-/* .reg_form_input_button:hover {
-    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
-    border-radius: 2px 17px 2px 17px;
-    color: rgba(255, 14, 14, 0.959);
-} */
 
 .reg_form_input_style{
-    color: rgba(51, 51, 51, 0.432); /*Цвет шрифта для ссылок*/
-    text-decoration: none; /*Убирает подчеркивание под ссылками*/
-    transition: .1s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
+    color: rgba(0, 0, 0, 0.793);
+    text-decoration: none;
+    transition: .1s linear;
     padding: 5px 10px;
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(241, 241, 241) 99%);
     border-top: solid;
@@ -75,16 +50,53 @@
     padding-bottom: 5px;
     text-align: center;
 }
+
 .reg_form_input_style:focus {
     outline:0;
     border-top: solid;
     border-color: #ffffff;
     background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
     border-radius: 15px 2px 15px 2px;
+    color: black;
 }
 
+.reg_form_input_button{
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase
+}
 .back_done{
-    width: 80%;
     display: flex;
+    justify-content: space-around;
+    min-width: max-content;
+    width: 100%;
+}
+
+
+.containerModal {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.897);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.messModal{
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(0.334turn, #ffffff67,#feffff00, #16c1ff6f , #ffffff00, #fdfeff81);
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.reg_form_message{
+    background: linear-gradient(0.334turn, #ffffff67,#feffff00, #0000006f , #ffffff00, #fdfeff81);
+    height: 100%;
+    padding: 10px;
 }

@@ -1,5 +1,4 @@
 import axios from "axios";
-import SetCookie from "../components/cookies/setCookie";
 const API_URL = process.env.REACT_APP_API_URL
 
 const authRequest = async (user) => {

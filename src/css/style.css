@@ -87,7 +87,10 @@ ul, li {
     background:#ffffffbb url(../img/site/home_font.jpg) center /cover;
 
 }
-
+input:required {
+    border-color: #a3000094;
+    border-width: 2px;
+  }
 
 .home{
     padding-top: 85px;
