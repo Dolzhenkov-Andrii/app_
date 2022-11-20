@@ -6,6 +6,7 @@ import refreshToken from "../services/refreshToken";
 // const SECRET_KEY = process.env.REACT_APP_SECRET_KEY
 
 const RequireAuth = ({children}) => {
+
     const location = useLocation();
     const {signOut} = useAuth();
     const fromPage = location.state?.from?.pathname || '/';

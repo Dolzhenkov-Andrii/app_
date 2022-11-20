@@ -1,7 +1,7 @@
-.containerSingIn{
+/* .containerSingIn{
     height: 300px;
     width:400px;
-    background-color: rgba(245, 245, 245, 0.288);
+    background-color: #262F34;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,13 +12,10 @@
 }
 
 .singIn{
-    /* height: 150px; */
     width: 100%;
-    /* background-color: rgb(150, 150, 150); */
 }
 
 .singInForm {
-    /* height: 200px; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -26,7 +23,6 @@
 .sItitle{
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-end; */
 }
 
 .title{
@@ -62,4 +58,4 @@
 }
 .sIhref:hover {
     color: #ff9a9a98;
-}
+} */

@@ -9,11 +9,11 @@ function Header() {
 
     const [navIn, setNavIn] = useState()
     const [userInfo, setUserInfo] = useState(null)
-    const {user} = useAuth();
+    const { user } = useAuth();
 
-    useEffect(()=>{
-        if(user){
-            setUserInfo((<UserIcon name={user['name']} username={user['username']}/>))
+    useEffect(() => {
+        if (user) {
+            setUserInfo((<UserIcon name={user['name']} username={user['username']} />))
             setNavIn(<NavUser />)
         } else {
             setUserInfo(null)
@@ -22,15 +22,12 @@ function Header() {
     }, [user])
 
     return (
-        <header className="containerHeader">
-            <div className="header">
-                <div className="headerLabel">
-                    <h1>Y</h1><h2>our</h2>
-                    <h1>B</h1><h2>log</h2>
-                </div>
+        <header className="containerGrey header">
+            <div className="containerYellow headerLogo">
+                <h1>your logo</h1>
+            </div>
                 {navIn}
                 {userInfo}
-            </div>
         </header>
     )
 }

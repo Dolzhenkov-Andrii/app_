@@ -21,27 +21,32 @@ function Registration() {
     const regForm = (event) => {
         event.preventDefault();
         const form = event.target;
-        const reg_form = {
-            username: form.username.value,
-            password: form.password.value,
-            email: form.email.value,
-            phone: form.phone.value,
-            surname: form.surname.value,
-            name: form.name.value,
-            birthday: form.birthday.value,
-        };
+        if (form.password.value === form.rep_password.value) {
 
-        registRequest(reg_form).then(response => {
-            if(response.data['username'] && response.data['email']){
-                let title = "Registration successfully completed"
-                let message = `
-                ${response.data['username']} ${response.data['email']} you have successfully registered, a confirmation email has been sent to your email ${form.email.value}, please confirm your email to complete the registration!
+            const reg_form = {
+                username: form.username.value,
+                password: form.password.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                surname: form.surname.value,
+                name: form.name.value,
+                birthday: form.birthday.value,
+            };
+
+            registRequest(reg_form).then(response => {
+                if (response.data['username'] && response.data['email']) {
+                    let title = "Registration successfully completed"
+                    let message = `
+                ${response.data['username']} you have successfully registered, a confirmation email has been sent to your email ${form.email.value}, please confirm your email to complete the registration!
                 `
-                setModal(<ModalMessage title={title} message={message} callback={goHome}/>)
-            }
-        }).catch(error => {
-            setResult(error.response.data)
-        })
+                    setModal(<ModalMessage title={title} message={message} callback={goHome} />)
+                }
+            }).catch(error => {
+                setResult(error.response.data)
+            })
+        } else {
+            setResult('Passwords do not match')
+        }
     }
 
     return (
@@ -50,7 +55,7 @@ function Registration() {
             <div className="reg_form">
                 <div className="reg_form_title"><h1>REGISTRATION</h1>
                 </div>
-                <div><p>{result}</p></div>
+                <div className="reg_form_error"><p>{result}</p></div>
                 <label>
                     <form onSubmit={regForm} className="reg_form_input">
                         <input className="reg_form_input_style" minlength="6" maxlength="30" type="text" name="username" placeholder="Nikname" required />

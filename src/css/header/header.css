@@ -2,16 +2,35 @@
 /* ----------------
     Header
 =================*/
+
 .header{
-    padding: 15px 0 0; /*Оцтупы в сверху и снизу 30px left and right 0px*/
-    height: 85px; /*Высота шапки (Header)*/
-    /*background-color: rgba(255, 255, 255, 0.5) ; /*Цвет фона шапки (Header)*/
-    opacity: 5; /*Делает прозрачность фона (90% видимости) */
-    /* position: fixed; */
+    padding: 15px;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    border-bottom: solid 1px black;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    background:rgba(175, 175, 175, 0.541)
+}
+
+
+.headerLogo {
+    height: 55px;
+    padding: 5px;
+    border: solid 2px #282623;
+    border-radius: 10px;
+    filter: opacity(90%);
+}
+/* .header{
+    padding: 15px 0 0;
+    height: 85px;
+    opacity: 5;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /* background-color: #000000; */
 }
 .headerScrol{
 }
@@ -30,7 +49,6 @@
 .headerLabel {
     margin:0 20px;
     padding:0 13px;
-    /* background-color: rgba(0, 0, 0, 0.329); */
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.986) 65%);
     height: 60px;
     width: 215px;
@@ -51,32 +69,29 @@
     border: solid;
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(196, 195, 195, 0.767) 65%);
     border-color: #00d9ff;
-}
+} */
 
 /* ----------------
 Nav
 =================*/
-.nav {
-    align-items: center; /*Размещает блоки внутри nav по центру*/
-    display: flex; /*все блоки в нутри header_inner буду работать по flex*/
-    justify-content: space-between; /*Значение flax  распологает содержимое header_inner на равные растояния друг от друга*/
-    font-size:  14px; /*Размер шрифта для навигации*/
-    font-weight: 400;/*стиля шрифта 400 = Regular для Open Sans*/
-    text-transform: uppercase; /*Делает буквы большие (ВСЕ БУКВЫ ЗАГЛАВНЫЕ)*/
+/* .nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size:  14px;
+    font-weight: 400;
+    text-transform: uppercase;
     width: 450px;
     height: 50px;
-    /* margin-left: 30px; */
-    /* background-color: rgba(0, 0, 0, 0.486); */
-    /* border-radius:0 15px 15px 0; */
 
 
 }
 .nav_link{
-    margin-left: 10px; /*Оцтуп у каждой ссылки с лево*/
-    margin-right: 10px; /*Оцтуп у каждой ссылки с права*/
-    color: rgb(51, 51, 51); /*Цвет шрифта для ссылок*/
-    text-decoration: none; /*Убирает подчеркивание под ссылками*/
-    transition: .2s linear; /*Плавный переход 0.1сек. к стилю ,     nav_link:hover */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    transition: .2s linear;
     padding: 5px 10px;
     background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(241, 241, 241) 99%);
     border-top: solid;
@@ -93,10 +108,10 @@ Nav
 
 }
 .nav_link:first-child {
-    margin-left: 10px; /*Делает оцтуп у первой ссылки nav_link*/
+    margin-left: 10px;
 }
 .nav_link:last-child {
-    margin-right: 10px; /*Делает оцтуп у последней ссылки nav_link*/
+    margin-right: 10px;
 }
 
 .active {
@@ -109,4 +124,4 @@ Nav
     color: rgba(255, 14, 14, 0.959);
     background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
     border-radius: 17px 2px 17px 2px;
-}
+} */

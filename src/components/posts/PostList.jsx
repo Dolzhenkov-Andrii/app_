@@ -1,7 +1,6 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "../../css/postList.css"
 import GetCookie from "../cookies/getCookie";
 import Pagination from "./Pagination";
 import PostListPage from "./PostListPage";

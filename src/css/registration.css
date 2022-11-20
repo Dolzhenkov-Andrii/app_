@@ -1,4 +1,4 @@
-.containerRegistration {
+/* .containerRegistration {
     width: 100%;
     min-height: 100vh;
     max-height: 100%;
@@ -71,7 +71,9 @@
     min-width: max-content;
     width: 100%;
 }
-
+.reg_form_error {
+    color: rgb(185, 0, 0);
+}
 
 .containerModal {
     height: 100%;
@@ -85,7 +87,7 @@
 
 }
 .messModal{
-    height: 200px;
+    height: max-content;
     width: 400px;
     padding: 20px;
     border-radius: 20px;
@@ -99,4 +101,4 @@
     background: linear-gradient(0.334turn, #ffffff67,#feffff00, #0000006f , #ffffff00, #fdfeff81);
     height: 100%;
     padding: 10px;
-}
+} */

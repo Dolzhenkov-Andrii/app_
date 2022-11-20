@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import '../css/authorization.css'
 import "../css/singin.css"
 import SetCookie from "../components/cookies/setCookie"
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from "../hook/useAuth";
 import authRequest from "../services/authRequest ";
 
-
 function Authorization() {
+
+
+
     const navigate = useNavigate();
     const location = useLocation();
     const {signIn} = useAuth();
@@ -17,6 +19,7 @@ function Authorization() {
     const [result, setResult] = useState()
 
     const fromPage = location.state?.from?.pathname || '/';
+
 
     const remember_check_box = ({target: {checked}}) => {
         setRemember(checked)
@@ -44,49 +47,54 @@ function Authorization() {
     }
 
     return (
-        <div className="containerAuthorization">
-            <div className="authorizationContent">
-                <div className="containerSingIn">
-                    <div className="singIn sItitle">
-                        <h1 className="title">Sign In </h1>
+        <div className="containerDark authorization">
+            <div className="containerYellow authbox">
+                <div>
+                    <div >
+                        <h1>Sign In </h1>
                         <Link to="/regist">
-                            <button className="toRegister">Register</button>
+                            <button>Register</button>
                         </Link>
                     </div>
                     <div><p>{result}</p></div>
-                    <form onSubmit={handleSubmit} className="singIn singInForm">
+                    <form onSubmit={handleSubmit}>
                         <label>
                             <input
-                                className="reg_form_input_style sIforms"
+
                                 onChange={e => setLogin(e.target.value)}
                                 type="login"
                                 name="login"
                                 placeholder={login} required />
                             <input
-                                className="reg_form_input_style sIforms"
+
                                 onChange={e => setPassword(e.target.value)}
                                 type="password"
                                 name="password"
                                 placeholder={pass} required />
                         </label>
-                        <button className="toRegister sIforms"  type="submit" value="authorization">Get started</button>
+                        <button type="submit" value="authorization">Get started</button>
                     </form>
-                    <div className="singIn sIoptionalMenu">
-                        <div className="sIoptionalMenu">
-                            <input className="input_checkbox" type="checkbox"
+                    <div>
+                        <div>
+                            <input type="checkbox"
                             onChange={remember_check_box}
                             defaultChecked={false} />
-                            <p className="singInText">Remember me</p>
+                            <p>Remember me</p>
                         </div>
                         <div>
-                            <Link to="/null" className="singInText sIhref">Lost your password?</Link>
+                            <Link to="/null">Lost your password?</Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="authorizationImg"></div>
+            <div className="containerDark imgbox2"><h2>Share</h2></div>
+            <div className="containerGreen imgbox1"><h2>Create</h2></div>
+            <div className="containerGrey imgbox3"><h2>Watch</h2></div>
         </div>
     )
 }
 
 export default Authorization;
+
+
+

@@ -1,46 +1,32 @@
-/* ----------------
-    footer
-=================*/
-.containerFooter {
-    position: relative;
-}
+
 .footer {
-    height: 48px;
-    background-color: #000000;
+    min-height: 40px;
+    max-height: max-content;
+    color: rgba(175, 175, 175, 0.9);
+    background-color: black;
     opacity: 95%;
     display: flex;
     justify-content: space-between;
-    z-index: 1000;
     width: 100%;
     bottom: 0;
-}
-
-.item_footer {
-    width: 100%;
-    max-width: 270px;
-    text-align: center;
-    margin: 15px 0;
-    margin-left: 30px;
+    position: absolute;
 }
 
 .fi_media {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    max-width: max-content;
+    padding: 10px 0;
+    margin-left: 50px;
 }
 
 .text_footer {
     width: max-content;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color: #666666;
-    font-weight: 400;
+    color: #777777;
     text-align: right;
-    margin-top: 15px;
-    margin-right: 30px;
-}
-
-.f_text>p {
-    margin: 0;
+    margin: auto 30px;
 }
 
 .media_i1 {

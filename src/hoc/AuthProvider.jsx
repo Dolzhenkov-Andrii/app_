@@ -6,6 +6,7 @@ export const AuthContext = createContext(null)
 
 export const AuthProvider = ({children}) => {
 
+
     const [user, setUser] = useState(JSON.parse(GetCookie('user') || null))
 
     const signIn = (newUser, collBack) => {
