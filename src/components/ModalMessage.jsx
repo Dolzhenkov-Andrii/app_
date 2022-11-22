@@ -1,14 +1,14 @@
 import React from "react";
-import '../css/registration.css'
+import '../css/style.css'
 
 const ModalMessage = ({ title, message, callback }) => {
     return (
-        <div className="containerModal">
-            <div className="messModal">
-                <div className="reg_form_title">
+        <div className="backBlock">
+            <div className="containerYellow contBlock">
+                <div className="contBlockTitle">
                     <h3>{title}</h3>
                 </div>
-                <div className="reg_form_message">
+                <div className="contBlockMessage">
                     <p>{message}</p>
                 </div>
                 <button className="reg_form_input_button" onClick={callback}>EXIT</button>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import '../css/authorization.css'
-import "../css/singin.css"
 import SetCookie from "../components/cookies/setCookie"
-import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from "../hook/useAuth";
 import authRequest from "../services/authRequest ";
 
@@ -12,7 +11,7 @@ function Authorization() {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const {signIn} = useAuth();
+    const { signIn } = useAuth();
     const [login, setLogin] = useState("Nikname")
     const [pass, setPassword] = useState("Password")
     const [remember, setRemember] = useState(false)
@@ -21,7 +20,7 @@ function Authorization() {
     const fromPage = location.state?.from?.pathname || '/';
 
 
-    const remember_check_box = ({target: {checked}}) => {
+    const remember_check_box = ({ target: { checked } }) => {
         setRemember(checked)
     }
 
@@ -39,7 +38,7 @@ function Authorization() {
                 SetCookie('access_token', response.data.access_token)
                 SetCookie('refresh_token', response.data.refresh_token)
                 SetCookie('user', JSON.stringify(response.data.user))
-                signIn(response.data.user, () => navigate(fromPage, {replace: true}))
+                signIn(response.data.user, () => navigate(fromPage, { replace: true }))
             }
         }).catch(error => {
             setResult(error.response.data)
@@ -49,36 +48,34 @@ function Authorization() {
     return (
         <div className="containerDark authorization">
             <div className="containerYellow authbox">
-                <div>
-                    <div >
-                        <h1>Sign In </h1>
+                <div className="authBoxContent">
+                    <div className="authBoxTitle">
+                        <h1>Sign In</h1>
                         <Link to="/regist">
-                            <button>Register</button>
+                            <button className="authBoxButton" >Register</button>
                         </Link>
                     </div>
-                    <div><p>{result}</p></div>
-                    <form onSubmit={handleSubmit}>
-                        <label>
-                            <input
-
-                                onChange={e => setLogin(e.target.value)}
-                                type="login"
-                                name="login"
-                                placeholder={login} required />
-                            <input
-
-                                onChange={e => setPassword(e.target.value)}
-                                type="password"
-                                name="password"
-                                placeholder={pass} required />
-                        </label>
-                        <button type="submit" value="authorization">Get started</button>
+                    <div className="authBoxError"><h2>{result}</h2></div>
+                    <form className="authBoxForm" onSubmit={handleSubmit}>
+                        <input
+                            className="authInput"
+                            onChange={e => setLogin(e.target.value)}
+                            type="login"
+                            name="login"
+                            placeholder={login} required />
+                        <input
+                            className="authInput"
+                            onChange={e => setPassword(e.target.value)}
+                            type="password"
+                            name="password"
+                            placeholder={pass} required />
+                        <button className="authBoxButton" type="submit" value="authorization">Get started</button>
                     </form>
-                    <div>
-                        <div>
+                    <div className="authBoxFooter">
+                        <div className="authFooterInput">
                             <input type="checkbox"
-                            onChange={remember_check_box}
-                            defaultChecked={false} />
+                                onChange={remember_check_box}
+                                defaultChecked={false} />
                             <p>Remember me</p>
                         </div>
                         <div>

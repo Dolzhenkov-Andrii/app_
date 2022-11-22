@@ -1,14 +1,59 @@
-/* .containerRegistration {
+.registration {
     width: 100%;
-    min-height: 100vh;
-    max-height: 100%;
-    background: rgb(228, 228, 228);
-    position: relative;
+    height: 100%;
+    background: rgba(158, 158, 158, 0.568) url(../img/site/registration.jpg) right /cover;
     display: flex;
-    background: rgba(158, 158, 158, 0.568) url(../img/site/registration_img.jpg) right /cover;
     justify-content: center;
     align-items: center;
 }
+
+.registrBox {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+    min-width: max-content;
+    height: max-content;
+}
+
+.registrBoxError {
+    border-top: solid 2px rgba(0, 0, 0, 0.685);
+    height: 30px;
+    width: 100%;
+    font-size: 15px;
+    color: rgba(209, 0, 0, 0.918);
+    text-align: center;
+}
+
+.registrBoxForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registrInput {
+    width: 250px;
+    text-align: center;
+    height: 35px;
+    margin: 3px;
+}
+
+.registrBoxButton {
+    width: 100%;
+    /* border-top: solid 2px #FBCD4B; */
+    border-top: solid 2px rgba(0, 0, 0, 0.685);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.registrButton{
+    width: 100%;
+}
+/*
 
 .reg_form{
     background: linear-gradient(0.334turn, #ffffff67,#feffff00, #16c1ff6f , #ffffff00, #fdfeff81);

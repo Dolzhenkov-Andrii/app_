@@ -7,17 +7,11 @@
     background: rgba(158, 158, 158, 0.568) url(../img/site/authimg.jpg) top /cover;
     justify-content: center;
     align-items: center;
-
-
 }
-/* .authorizationContent{
-    width: 50%;
-    padding: 20%;
-} */
 
 .authbox {
     width: 500px;
-    height: 500px;
+    height: max-content;
     position: absolute;
     margin-right: 50%;
     z-index: 5;
@@ -27,9 +21,9 @@
     padding: 10px;
 }
 
-.imgbox1 > h2,
-.imgbox2 > h2,
-.imgbox3 > h2 {
+.imgbox1>h2,
+.imgbox2>h2,
+.imgbox3>h2 {
     color: #cbcfb9;
     background-color: rgba(116, 115, 115, 0.357);
     width: 100%;
@@ -39,8 +33,8 @@
 
 .imgbox1 {
     width: 350px;
-    height: 450px;
-    background:rgba(158, 158, 158, 0.568) url(../img/site/imgbox1.jpg) top/cover;
+    height: 400px;
+    background: rgba(158, 158, 158, 0.568) url(../img/site/imgbox1.jpg) top/cover;
     display: flex;
     align-items: flex-end;
     border-radius: 20px;
@@ -50,10 +44,11 @@
     margin-right: 5%;
     margin-bottom: 10%;
 }
+
 .imgbox2 {
     width: 400px;
     height: 400px;
-    background:rgba(158, 158, 158, 0.568) url(../img/site/imgbox2.jpg) bottom/cover;
+    background: rgba(158, 158, 158, 0.568) url(../img/site/imgbox2.jpg) bottom/cover;
     display: flex;
     align-items: flex-end;
     padding: 20px;
@@ -63,10 +58,11 @@
     margin-top: 10%;
     margin-left: 30%;
 }
+
 .imgbox3 {
     width: 400px;
     height: 300px;
-    background:rgba(158, 158, 158, 0.568) url(../img/site/imgbox3.jpg) center/cover;
+    background: rgba(158, 158, 158, 0.568) url(../img/site/imgbox3.jpg) center/cover;
     display: flex;
     align-items: flex-end;
     padding: 20px;
@@ -75,4 +71,62 @@
     margin-left: 70%;
     margin-bottom: 10%;
     z-index: 1;
+}
+
+.authBoxContent{
+    background-color: #fcfdfba9;
+    border-radius: 25px;
+    height: 100%;
+}
+
+.authBoxTitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: solid 2px rgba(3, 3, 3, 0.555);
+}
+
+.authBoxError {
+    height: 40px;
+    margin: 5px 80px;
+    color: red;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.authBoxForm {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-bottom: solid 2px rgba(3, 3, 3, 0.555);
+    align-items: center;
+}
+
+.authInput{
+    width: 100%;
+    margin: 5px;
+    width: 300px;
+    height: 45px;
+}
+
+.authBoxButton {
+    font-size: 20px;
+}
+
+.authBoxFooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    align-items: center;
+}
+
+.authFooterInput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.authFooterInput>p{
+    margin-left: 5px;
 }
