@@ -1,7 +1,5 @@
 import React from "react";
-import '../css/registration.css'
-import '../css/authorization.css'
-import "../css/singin.css"
+import "../css/style.css"
 import reactivRequest from "../services/reactivUser";
 import { useState } from "react";
 import ModalMessage from "./ModalMessage";
@@ -34,31 +32,29 @@ const ReactivationMessage = ({ title, callback }) => {
     }
 
     return (
-        <div className="containerModal">
-            <div className="messModal">
-                {modal}
-                <div className="reg_form_title">
+        <div className="backBlock">
+            {modal}
+            <div className="containerYellow contBlock">
+                <div className="contBlockTitle">
                     <h3>{title}</h3>
                 </div>
-                <div className="reg_form_message">
-                    <div><p>{result}</p></div>
-                    <form onSubmit={handleSubmit} className="singIn singInForm">
-                        <label>
-                            <input
-                                className="reg_form_input_style sIforms"
-                                type="login"
-                                name="login"
-                                placeholder="Nikname" required />
-                            <input
-                                className="reg_form_input_style sIforms"
-                                type="password"
-                                name="password"
-                                placeholder="Password" required />
-                        </label>
-                        <button className="toRegister sIforms" type="submit" value="authorization">Send a letter</button>
+                <div className="contBlockMessage">
+                    <div className="contBoxError"><p>{result}</p></div>
+                    <form onSubmit={handleSubmit} className="contBoxForm">
+                        <input
+                            className="contInput"
+                            type="login"
+                            name="login"
+                            placeholder="Nikname" required />
+                        <input
+                            className="contInput"
+                            type="password"
+                            name="password"
+                            placeholder="Password" required />
+                        <button className="contBoxButton" type="submit" value="authorization">Send a letter</button>
                     </form>
                 </div>
-                <button className="reg_form_input_button" onClick={callback}>EXIT</button>
+                <button onClick={callback}>EXIT</button>
             </div>
         </div>
     )

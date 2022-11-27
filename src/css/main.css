@@ -1,0 +1,9 @@
+.main {
+    margin-top:  85px;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: #282623;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+}

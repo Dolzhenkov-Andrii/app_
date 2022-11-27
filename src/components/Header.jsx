@@ -1,33 +1,34 @@
 import React, { useEffect, useState } from "react";
 import '../css/header/header.css';
-import NavGuest from "./navigate/NavGuest";
 import NavUser from "./navigate/NavUser"
 import UserIcon from "./UserIcon";
 import { useAuth } from "../hook/useAuth";
 
 function Header() {
 
-    const [navIn, setNavIn] = useState()
-    const [userInfo, setUserInfo] = useState(null)
+    const [navIn, setNavIn] = useState(null)
     const { user } = useAuth();
+    const [styleHeader, setStyleHeaders] = useState("containerGrey header")
 
     useEffect(() => {
         if (user) {
-            setUserInfo((<UserIcon name={user['name']} username={user['username']} />))
-            setNavIn(<NavUser />)
+            setNavIn(<div className="containerMenu">
+                <NavUser />
+                <UserIcon name={user['name']} username={user['username']} />
+            </div>)
+            setStyleHeaders("containerGrey header loginHeder")
         } else {
-            setUserInfo(null)
+            setStyleHeaders("containerGrey header")
             setNavIn(null)
         }
     }, [user])
 
     return (
-        <header className="containerGrey header">
+        <header className={styleHeader}>
             <div className="containerYellow headerLogo">
                 <h1>your logo</h1>
             </div>
-                {navIn}
-                {userInfo}
+            {navIn}
         </header>
     )
 }

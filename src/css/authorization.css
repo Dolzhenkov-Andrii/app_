@@ -86,35 +86,6 @@
     border-bottom: solid 2px rgba(3, 3, 3, 0.555);
 }
 
-.authBoxError {
-    height: 40px;
-    margin: 5px 80px;
-    color: red;
-    border-radius: 5px;
-    text-align: center;
-
-}
-
-.authBoxForm {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    padding-bottom: 40px;
-    border-bottom: solid 2px rgba(3, 3, 3, 0.555);
-    align-items: center;
-}
-
-.authInput{
-    width: 100%;
-    margin: 5px;
-    width: 300px;
-    height: 45px;
-}
-
-.authBoxButton {
-    font-size: 20px;
-}
-
 .authBoxFooter{
     display: flex;
     justify-content: space-between;
@@ -127,6 +98,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.authFooterInput>p{
+.authFooterInputText{
     margin-left: 5px;
+    color: #282623;
 }

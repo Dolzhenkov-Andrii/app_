@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "../../css/posts.css";
 import GetCookie from "../cookies/getCookie";
 import Pagination from "./Pagination";
 import PostListPage from "./PostListPage";
@@ -20,7 +21,7 @@ function PostList() {
 
         const getPosts = () => {
             setLoading(true)
-            Posts.getPosts(0,20).then(response => {
+            Posts.getPosts(0, 20).then(response => {
                 console.log(response)
                 setPosts(response.data['posts'])
                 setLoading(false)
@@ -52,19 +53,19 @@ function PostList() {
     }
 
     return (
-        <div className="containerPostList" >
-            <div className="titlePostList">
+        <div className="containerGrey contPosts" >
+            <div className="postsTitle">
                 <h1>ALL POST</h1>
             </div>
+            <PostListPage posts={currentPosts} loading={loading} />
             <div className="sliderPosts">
-                <button className="sliderP sliderStyleButton" onClick={prevList}>-=Prev</button>
+                <button className="nav_link" onClick={prevList}>- = Prev</button>
                 <Pagination
                     sizeList={sizeList}
                     allList={posts.length}
                     paigeNumberList={paigeNumberList} />
-                <button className="sliderP sliderStyleButton" onClick={nextList}>Next=-</button>
+                <button className="nav_link" onClick={nextList}>Next = -</button>
             </div>
-            <PostListPage posts={currentPosts} loading={loading} />
         </div>
     )
 }

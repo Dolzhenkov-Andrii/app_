@@ -1,21 +1,23 @@
-
 /* ----------------
     Header
 =================*/
 
-.header{
+.header {
     padding: 15px;
     height: 85px;
     display: flex;
     justify-content: space-around;
     min-width: 100%;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #FBCD4B;
     position: fixed;
-    z-index: 1001;
+    z-index: 100;
     top: 0;
-    background:rgba(175, 175, 175, 0.541)
+    background: rgba(175, 175, 175, 0.753)
 }
 
+.loginHeder {
+    justify-content: space-between;
+}
 
 .headerLogo {
     height: 55px;
@@ -24,6 +26,54 @@
     border-radius: 10px;
     filter: opacity(90%);
 }
+
+.containerMenu {
+    display: flex;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.nav {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.nav_link {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FBCD4B;
+    background-color: #282623;
+    border: solid 1px #FBCD4B;
+}
+.nav_link:hover {
+    border: solid 3px #88A550;
+    padding: 8px;
+    color: #88A550;
+}
+.active {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+    border: solid 2px #282623;
+    padding: 15px 10px;
+    /* background-color: #FBCD4B; */
+    background: linear-gradient(0.5turn, #88A550, #FBCD4B,#88A550);
+    color: #282623;
+}
+.active:hover {
+    border: solid 2px #282623;
+    padding: 15px 10px;
+    color: #282623;
+}
+
 /* .header{
     padding: 15px 0 0;
     height: 85px;

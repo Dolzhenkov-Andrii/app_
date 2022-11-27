@@ -52,34 +52,34 @@ function Authorization() {
                     <div className="authBoxTitle">
                         <h1>Sign In</h1>
                         <Link to="/regist">
-                            <button className="authBoxButton" >Register</button>
+                            <button className="contBoxButton" >Register</button>
                         </Link>
                     </div>
-                    <div className="authBoxError"><h2>{result}</h2></div>
-                    <form className="authBoxForm" onSubmit={handleSubmit}>
+                    <div className="contBoxError"><h2>{result}</h2></div>
+                    <form className="contBoxForm" onSubmit={handleSubmit}>
                         <input
-                            className="authInput"
+                            className="contInput"
                             onChange={e => setLogin(e.target.value)}
                             type="login"
                             name="login"
                             placeholder={login} required />
                         <input
-                            className="authInput"
+                            className="contInput"
                             onChange={e => setPassword(e.target.value)}
                             type="password"
                             name="password"
                             placeholder={pass} required />
-                        <button className="authBoxButton" type="submit" value="authorization">Get started</button>
+                        <button className="contBoxButton" type="submit" value="authorization">Get started</button>
                     </form>
                     <div className="authBoxFooter">
                         <div className="authFooterInput">
                             <input type="checkbox"
                                 onChange={remember_check_box}
                                 defaultChecked={false} />
-                            <p>Remember me</p>
+                            <p className="authFooterInputText">Remember me</p>
                         </div>
                         <div>
-                            <Link to="/null">Lost your password?</Link>
+                            <Link className="authFooterInputText" to="/null">Lost your password?</Link>
                         </div>
                     </div>
                 </div>

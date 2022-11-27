@@ -12,6 +12,7 @@ import Post from "./components/posts/Post";
 import PostList from "./components/posts/PostList";
 import Page404 from "./components/errors/Page404";
 import Activation from "./components/Activation";
+import Profile from "./components/Profile";
 
 function App() {
   const [indexRender, setIndexRender] = useState();
@@ -34,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index="/*" element={indexRender} >
-            <Route index element={<Page404 />} />
+            <Route index element={<Profile />} />
             <Route path="posts" element={<PostList />} />
             <Route path="posts/post/:id" element={<Post />} />
           </Route>
