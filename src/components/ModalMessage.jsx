@@ -3,8 +3,8 @@ import '../css/style.css'
 
 const ModalMessage = ({ title, message, callback }) => {
     return (
-        <div className="backBlock addZIndex5">
-            <div className="containerYellow contBlock">
+        <div className="backBlock">
+            <div className="contBlock">
                 <div className="contBlockTitle">
                     <h3>{title}</h3>
                 </div>

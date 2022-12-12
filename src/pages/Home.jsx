@@ -6,10 +6,8 @@ import { NavLink, Outlet } from "react-router-dom";
 
 function Home() {
     return (
-        <div className="containerMain">
-            <div className="main">
-                <Outlet />
-            </div>
+        <div className="main">
+            <Outlet />
         </div>
     )
 }

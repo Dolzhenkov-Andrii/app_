@@ -51,32 +51,34 @@ function Registration() {
     }
 
     return (
-        <div className="containerDark registration">
+        <div className="registration">
             {modal}
-            <div className="containerGrey registrBox">
-                <h1>REGISTRATION</h1>
-                <div className="registrBoxError"><p>{result}</p></div>
-                <form  onSubmit={regForm} className="registrBoxForm">
-                    <input className="registrInput" minlength="6" maxlength="30" type="text" name="username" placeholder="Nikname" required />
+            <div className="registrContainer">
+                <div className="registrBox">
+                    <h1>REGISTRATION</h1>
+                    <div className="registrBoxError"><p>{result}</p></div>
+                    <form onSubmit={regForm} className="registrBoxForm">
+                        <input className="registrInput" minlength="6" maxlength="30" type="text" name="username" placeholder="Nikname" required />
 
-                    <input className="registrInput" minlength="8" maxlength="40" type="password" name="password" placeholder="Password" autocomplete="on" required />
+                        <input className="registrInput" minlength="8" maxlength="40" type="password" name="password" placeholder="Password" autocomplete="on" required />
 
-                    <input className="registrInput" minlength="8" maxlength="40" type="password" name="rep_password" placeholder="Repeat password" autocomplete="on" required />
+                        <input className="registrInput" minlength="8" maxlength="40" type="password" name="rep_password" placeholder="Repeat password" autocomplete="on" required />
 
-                    <input className="registrInput" minlength="6" maxlength="64" type="email" name="email" placeholder="@email" required />
+                        <input className="registrInput" minlength="6" maxlength="64" type="email" name="email" placeholder="@email" required />
 
-                    <input className="registrInput" minlength="8" maxlength="16" type="text" name="phone" placeholder="Phone +380.." required />
+                        <input className="registrInput" minlength="8" maxlength="16" type="text" name="phone" placeholder="Phone +380.." required />
 
-                    <input className="registrInput" minlength="2" maxlength="30" type="text" name="surname" placeholder="Surname" required />
+                        <input className="registrInput" minlength="2" maxlength="30" type="text" name="surname" placeholder="Surname" required />
 
-                    <input className="registrInput" minlength="2" maxlength="30" type="text" name="name" placeholder="Name" required />
+                        <input className="registrInput" minlength="2" maxlength="30" type="text" name="name" placeholder="Name" required />
 
-                    <input className="registrInput" type="date" name="birthday" placeholder="Birthday" required />
-                    <div className="registrBoxButton">
-                        <button className="registrButton" onClick={goBack}>Back</button>
-                        <button className="registrButton" type="submit" value="registraitions">done</button>
-                    </div>
-                </form>
+                        <input className="registrInput" type="date" name="birthday" placeholder="Birthday" required />
+                        <div className="registrBoxButton">
+                            <button className="registrButton" onClick={goBack}>Back</button>
+                            <button className="registrButton" type="submit" value="registraitions">done</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     )

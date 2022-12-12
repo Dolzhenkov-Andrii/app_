@@ -8,20 +8,18 @@ function Profile() {
     const { user } = useAuth();
 
     return (
-        <div className="containerGrey containerProfile">
-            <div className="userInfo">
-                <div className="boxOne">
-                <h2> {user['username']}</h2>
-                <h4> {user['surname']}</h4>
-                <h4> {user['name']} </h4>
+        <div className="containerProfile">
+            <div className="containerUserInfo">
+                <img className="avatar" src={"http://127.0.0.1:5050/static/avatar.png"} />
+                <div className="userInfo">
+                    <h1>{user['username']}</h1>
+                    <h3>{user['surname']}</h3>
+                    <h3>{user['name']} </h3>
+                    <h4>{user['birthday']}</h4>
+                    <h4>{user['email']}</h4>
+                    <h4>{user['phone']} </h4>
+                    {console.log(user)}
                 </div>
-
-                <div className="boxTwo">
-                <p>{user['birthday']}</p>
-                <p>{user['email']}</p>
-                <p> {user['phone']} </p>
-                </div>
-
             </div>
         </div>
     )

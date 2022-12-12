@@ -1,11 +1,19 @@
-body, header, footer {
+body {
     margin: 0;
     padding: 0;
     width: 100%;
+    min-height: 100%;
     font-family: 'EB Garamond', serif;
     font-weight: 400;
     background-color: #282623;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
 
 *:focus {
     outline: none;
@@ -20,27 +28,34 @@ input:-internal-autofill-selected {
     font-style: none;
 }
 
+.contBoxButton {
+    font-size: 20px;
+}
 
 button {
     border-style: none;
-    border: solid 2px #a3a59986;
     text-transform: uppercase;
     color: #A3A599;
     background-color: #282623;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 15px;
     margin: 5px;
     font-family: 'EB Garamond', serif;
     font-weight: 600;
 }
 button:hover {
-    color: #88A550;
-    border-color: #88A550;
-    border-radius: 10px;
+    color: #282623;
+    background-color: #FBCD4B;
     transition: .2s;
 }
-
+.contInput{
+    width: 100%;
+    margin: 5px;
+    width: 300px;
+    height: 45px;
+}
 input {
+    margin: 5px;
     border-style: none;
     background-color: #f7f8f4c0;
     border-radius: 5px;
@@ -56,14 +71,10 @@ input:hover {
     border: solid 2px #FBCD4B;
 }
 input:focus {
-    border:double 4px #88A550;
+    border:solid 2px #88A550;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-}
+
 p {
    margin: 0;
 }
@@ -75,7 +86,30 @@ ul, li {
     padding: 0;
     list-style: none;
 }
+
+.contBoxError {
+    width: auto;
+    height: 55px;
+    margin: 5px;
+    color: red;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contBoxForm {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 40px;
+    border-bottom: solid 2px rgb(3, 3, 3);
+    align-items: center;
+}
+
 .backBlock {
+    color: #ffffff;
     text-align: center;
     background-color: #282623ec;
     height: 100%;
@@ -86,25 +120,8 @@ ul, li {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Переделать! */
-.addZIndex1 {
-    z-index: 10001;
-}
-.addZIndex2 {
-    z-index: 10002;
-}
-.addZIndex3 {
-    z-index: 10003;
-}
-.addZIndex4 {
-    z-index: 10004;
-}
-.addZIndex5 {
     z-index: 10005;
 }
-
 .contBlock {
     height: max-content;
     width: max-content;
@@ -115,35 +132,6 @@ ul, li {
     flex-direction: column;
     justify-content: space-between;
 }
-
-.contBoxError {
-    height: 40px;
-    margin: 5px 80px;
-    color: red;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.contInput{
-    width: 100%;
-    margin: 5px;
-    width: 300px;
-    height: 45px;
-}
-
-.contBoxButton {
-    font-size: 20px;
-}
-
-.contBoxForm {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    padding-bottom: 40px;
-    border-bottom: solid 2px rgba(3, 3, 3, 0.76);
-    align-items: center;
-}
-
 .contBlockMessage{
     border-top: solid 2px #282623;
     margin-top: 10px;
@@ -151,6 +139,21 @@ ul, li {
     padding: 10px;
     width: 400px;
 }
+.containerLayout {
+    height: 100%;
+    width: 100%;
+    background-color: #282623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.avatarMini{
+    height: 100px;
+    width:  100px;
+    border-radius: 100%;
+}
+/*
 
 .containerMain{
     padding: 0 15px 15px 15px;
@@ -183,15 +186,7 @@ ul, li {
     height: max-content;
 }
 
-.body {
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    background-color: #282623;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+ */
 
 /*
 font-family: 'EB Garamond', serif;

@@ -3,11 +3,36 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 25px;
     background-color: #A3A599;
     padding: 15px;
+    margin: 10px 0;
 }
 
-.userInfo {
+.containerUserInfo {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    background-color: #fcfdfba9;
+    padding: 10px;
+    border-radius: 25px;
+}
+.userInfo {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    width: max-content;
+    margin: 0 10px;
+}
+.userInfo>h1{
+    border-bottom: solid 2px black;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
+    height: 300px;
+    width:  300px;
+    border-radius: 100%;
 }

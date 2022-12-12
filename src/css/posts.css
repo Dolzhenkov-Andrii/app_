@@ -1,4 +1,4 @@
-.contPosts {
+/* .contPosts {
     width: auto;
     border-radius: 15px;
     display: flex;
@@ -23,7 +23,17 @@
 }
 
 .postList{
+    padding: 10px;
     width: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    min-width: 100%;
+    min-height: 65vh;
 }
+
+.contPost{
+    width: 45%;
+    height: 110px;
+    margin: 15px;
+} */

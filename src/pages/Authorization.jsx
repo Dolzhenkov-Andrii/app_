@@ -46,8 +46,8 @@ function Authorization() {
     }
 
     return (
-        <div className="containerDark authorization">
-            <div className="containerYellow authbox">
+        <div className="authorization">
+            <div className="authbox">
                 <div className="authBoxContent">
                     <div className="authBoxTitle">
                         <h1>Sign In</h1>
@@ -84,9 +84,9 @@ function Authorization() {
                     </div>
                 </div>
             </div>
-            <div className="containerDark imgbox2"><h2>Share</h2></div>
-            <div className="containerGreen imgbox1"><h2>Create</h2></div>
-            <div className="containerGrey imgbox3"><h2>Watch</h2></div>
+                <div className="containerImgBox imgbox1"><h2>Create</h2></div>
+                <div className="containerImgBox imgbox2"><h2>Share</h2></div>
+                <div className="containerImgBox imgbox3"><h2>Watch</h2></div>
         </div>
     )
 }

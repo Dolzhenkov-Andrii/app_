@@ -64,7 +64,6 @@
     border-radius: 20px;
     border: solid 2px #282623;
     padding: 15px 10px;
-    /* background-color: #FBCD4B; */
     background: linear-gradient(0.5turn, #88A550, #FBCD4B,#88A550);
     color: #282623;
 }
@@ -73,7 +72,19 @@
     padding: 15px 10px;
     color: #282623;
 }
+.headerLabel, .headerLabel >h1 {
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+    margin-left: 25px;
+}
 
+.avatarMini{
+    margin-left: 5px;
+    height: 60px;
+    width:  60px;
+    border-radius: 100%;
+}
 /* .header{
     padding: 15px 0 0;
     height: 85px;
@@ -85,11 +96,7 @@
 .headerScrol{
 }
 
-.headerLabel, .headerLabel >h1 {
-    display: flex;
-    justify-content: space-between;
-    text-align:center;
-}
+
 .headerLabel > h1 {
     color: #ff0000;
 }
