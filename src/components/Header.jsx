@@ -25,7 +25,7 @@ function Header() {
 
     return (
         <header className={styleHeader}>
-            <div className="containerYellow headerLogo">
+            <div className="headerLogo">
                 <h1>your logo</h1>
             </div>
             {navIn}

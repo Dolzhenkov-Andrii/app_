@@ -8,7 +8,6 @@ import PostListPage from "./PostListPage";
 import SetCookie from "../cookies/setCookie";
 import RemoveCookie from "../cookies/removeCookie";
 import Posts from "../../services/postsRequest";
-// const API_URL = process.env.API_URL
 
 
 function PostList() {
@@ -53,18 +52,19 @@ function PostList() {
     }
 
     return (
-        <div className="containerGrey contPosts" >
+        <div className="containerPosts" >
             <div className="postsTitle">
                 <h1>ALL POST</h1>
             </div>
             <PostListPage posts={currentPosts} loading={loading} />
             <div className="sliderPosts">
-                <button className="nav_link" onClick={prevList}>- = Prev</button>
+                <button  onClick={prevList}>- = Prev</button>
                 <Pagination
                     sizeList={sizeList}
                     allList={posts.length}
+                    currentList={currentList}
                     paigeNumberList={paigeNumberList} />
-                <button className="nav_link" onClick={nextList}>Next = -</button>
+                <button  onClick={nextList}>Next = -</button>
             </div>
         </div>
     )

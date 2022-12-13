@@ -12,8 +12,10 @@
     position: fixed;
     z-index: 100;
     top: 0;
-    background: rgba(175, 175, 175, 0.753)
+    background-color: #a3a599e8;
 }
+
+
 
 .loginHeder {
     justify-content: space-between;
@@ -22,8 +24,12 @@
 .headerLogo {
     height: 55px;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: solid 2px #282623;
     border-radius: 10px;
+    background-color: #FBCD4B;
     filter: opacity(90%);
 }
 
@@ -45,44 +51,38 @@
 .nav_link {
     text-transform: uppercase;
     text-align: center;
+    font-size: 20px;
+    font-weight: 600;
     margin: 10px;
-    width: max-content;
-    padding: 10px;
-    border-radius: 10px;
-    color: #FBCD4B;
-    background-color: #282623;
-    border: solid 1px #FBCD4B;
+    min-width: max-content;
+    padding: 27px 5px;
+    color: #000000;
 }
 .nav_link:hover {
-    border: solid 3px #88A550;
-    padding: 8px;
-    color: #88A550;
+    transition: .2s;
+    border-bottom: solid 3px #FBCD4B;
+    color: #FBCD4B;
 }
-.active {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    border-radius: 20px;
-    border: solid 2px #282623;
-    padding: 15px 10px;
-    background: linear-gradient(0.5turn, #88A550, #FBCD4B,#88A550);
-    color: #282623;
-}
-.active:hover {
-    border: solid 2px #282623;
-    padding: 15px 10px;
-    color: #282623;
+
+.active, .active:hover {
+    border-bottom: solid 3px #d5d6d0;
+    color: #d5d6d0;
 }
 .headerLabel, .headerLabel >h1 {
     display: flex;
     justify-content: space-between;
     text-align:center;
+    align-items: center;
     margin-left: 25px;
+    background-color: #d5d6d0;
+    padding: 0 0 0 20px;
+    border-radius: 35px 40px 40px 35px;
 }
 
 .avatarMini{
-    margin-left: 5px;
-    height: 60px;
-    width:  60px;
+    margin-left: 10px;
+    height: 70px;
+    width:  70px;
     border-radius: 100%;
 }
 /* .header{

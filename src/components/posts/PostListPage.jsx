@@ -4,7 +4,7 @@ function PostListPage({ posts, loading }) {
 
     if (loading) {
         return (
-            <h2>LOADING...</h2>
+            <h1>LOADING...</h1>
         )
     }
 
