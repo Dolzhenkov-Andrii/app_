@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../hook/useAuth";
 import { decodeToken } from "react-jwt";
+import UpdateCookie from "../components/cookies/updateCookie";
 import GetCookie from "../components/cookies/getCookie";
 import refreshToken from "../services/refreshToken";
 // const SECRET_KEY = process.env.REACT_APP_SECRET_KEY
@@ -22,6 +23,9 @@ const RequireAuth = ({children}) => {
 
     if(now_time_ms > tokne_time_ms){
         refreshToken().catch(error => {
+            UpdateCookie('access_token', null)
+            UpdateCookie('refresh_token', null)
+            UpdateCookie('User', null)
             console.log(`Fine: Token is valid\n\t ${token_data}`)
             signOut(() => navigate(fromPage, {replace: true}))
         })

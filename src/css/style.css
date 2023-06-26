@@ -2,35 +2,84 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 95vh;
+    margin-top: 40px;
     min-height: 100%;
     font-family: 'EB Garamond', serif;
     font-weight: 400;
-    background-color: #282623;
+    color: #FFFFFF;
+    background-color: #181818;
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin: 0;
 }
-
 
 *:focus {
     outline: none;
 }
+
 *,
 *:before,
 *:after {
     margin: 0;
     box-sizing: border-box;
 }
-input:-internal-autofill-selected {
-    font-style: none;
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+     box-shadow: 0 0 0 30px #181818 inset !important;
+     color: #FFFFFF inset !important;
 }
+input::before{
+    font: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+} */
 
 .contBoxButton {
     font-size: 20px;
 }
+
+p {
+    margin: 0;
+}
+
+a {
+    /* font-family: 'Playfair Display', serif; */
+    text-decoration: none;
+}
+
+ul,
+li {
+    padding: 0;
+    list-style: none;
+}
+
+.containerLayout {
+    /* height: 90vh; */
+    width: 100%;
+    /* background-color: #282623; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*
+
 
 button {
     border-style: none;
@@ -75,17 +124,6 @@ input:focus {
 }
 
 
-p {
-   margin: 0;
-}
-a {
-    font-family: 'Playfair Display', serif;
-    text-decoration: none;
-}
-ul, li {
-    padding: 0;
-    list-style: none;
-}
 
 .contBoxError {
     width: auto;
@@ -167,42 +205,15 @@ ul, li {
     border:solid 5px #88A550;
     background: #88A550 url('../img/site/page404.jpg') bottom/cover;
 }
-/*
 
-.containerMain{
-    padding: 0 15px 15px 15px;
+.butExit{
+    background-color: #a84545;
+}
+.butExit:hover{
+    background-color: #cc2727;
+}
+
+.butSave {
+    color: #282623;
     background-color: #88A550;
-    height: 100%;
-    width: 100%;
-}
-
-.containerYellow {
-    background-color: #FBCD4B;
-    width: max-content;
-    height: max-content;
-}
-
-.containerGrey {
-    background-color: #A3A599;
-    width: max-content;
-    height: max-content;
-}
-
-.containerDark {
-    background-color: #282623;
-    width: max-content;
-    height: max-content;
-}
-
-.containerGreen {
-    background-color: #88A550;
-    width: max-content;
-    height: max-content;
-}
-
- */
-
-/*
-font-family: 'EB Garamond', serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Playfair Display', serif; */
+} */

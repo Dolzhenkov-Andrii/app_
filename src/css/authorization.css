@@ -1,100 +1,98 @@
 .authorization {
-    min-height: 100vh;
+    min-height: 95vh;
     width: 100%;
-    height: 100%;
     max-height: 100%;
     min-width: max-content;
     position: relative;
     display: flex;
-    background: #282623 url(../img/site/authimg.jpg) top /cover;
+    background: #282623 url(../img/site/authimg.jpg) center/ cover;
     justify-content: center;
     align-items: center;
 }
 
 .authbox {
-    width: 500px;
+    margin-bottom: 50px;
     height: max-content;
-    position: fixed;
-    margin-right: 50%;
-    margin-top: 5%;
-    z-index: 5;
-    border-radius: 30px;
-    background-color: #A3A599;
-    padding: 10px;
-}
-.containerImgBox {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 20px;
-    position:fixed;
-    border-radius: 50%;
-}
-
-.imgbox1 {
-    width: 200px;
-    height: 200px;
-    background: rgba(158, 158, 158, 0.568) url(../img/site/imgbox1.jpg) top/cover;
-    margin-bottom: 25%;
-    margin-left: 5%;
-    z-index: 2;
-}
-
-.imgbox2 {
-    width: 350px;
-    height: 350px;
-    background: rgba(158, 158, 158, 0.568) url(../img/site/imgbox2.jpg) bottom/cover;
-    margin-left: 35%;
-}
-
-.imgbox3 {
-    width: 250px;
-    height: 250px;
-    background: rgba(158, 158, 158, 0.568) url(../img/site/imgbox3.jpg) center/cover;
-    margin-top: 15%;
-    margin-left: 70%;
-    z-index: 1;
-}
-
-.imgbox1>h2,
-.imgbox2>h2,
-.imgbox3>h2 {
-    color: #cbcfb9;
-    background-color: rgba(116, 115, 115, 0.603);
-    width: max-content;
-    padding: 2px 25px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 0;
-}
-
-.authBoxContent{
-    background-color: #fcfdfba9;
-    border-radius: 25px;
-    padding: 15px;
-    height: 100%;
-    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-}
-.authBoxTitle {
-    display: flex;
-    justify-content: space-between;
+    background-color: #181818d7;
     padding: 15px;
-    border-bottom: solid 2px rgb(3, 3, 3);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
 }
-.authBoxFooter{
+.errorBox {
+    height: 10px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
+    justify-content: center;
+    color: #ED3024
+}
+
+.contBoxForm {
+    height: 200px;
+    width: max-content;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
 }
-.authFooterInput{
+
+.contInput {
+    color: #FFFFFF;
+    height: 37px;
+    width: 320px;
+    border: 0;
+    border-bottom:solid 1px #3F3F3F;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contInput:focus {
+    border-bottom:solid 1px #107EFF;
+    background-color: none;
+}
+
+
+.authInput{
+    margin-top: 65px;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
-.authFooterInputText{
-    margin-left: 5px;
-    color: #282623;
+.authInputCheckBox {
+    margin-right: 10px;
+    opacity: 80%;
 }
+
+.contBoxButton {
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #3137C9;
+}
+.contBoxButton:hover {
+    background-color: #313FFF;
+    transition: .2s;
+}
+
+.authLink {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.authLinkText {
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.authLinkText:hover {
+    color: #107EFF;
+    text-transform: uppercase;
+    transition: .2s;
+}
+

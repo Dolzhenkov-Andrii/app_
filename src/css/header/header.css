@@ -1,21 +1,78 @@
 /* ----------------
     Header
 =================*/
-
 .header {
+    background-color: #0D0D0D;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+}
+.imgLogo {
+    height: 49px;
+    margin-right: 3px;
+}
+
+.userHeader {
+    justify-content: flex-start;
+    padding: 0 25px;
+}
+
+.containerMenu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+
+.nav {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.nav_link {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px;
+    min-width: max-content;
+    padding: 12px 0;
+    color: #FFFFFF;
+}
+.nav_link:hover {
+    transition: .1s;
+    color: #313FFF;
+}
+
+.nav_link_activ {
+    border-bottom: solid 2px #313FFF;
+}
+/* .header {
     padding: 15px;
     height: 85px;
     display: flex;
     justify-content: space-around;
     min-width: 100%;
     border-bottom: solid 1px #FBCD4B;
-    position: fixed;
-    z-index: 100;
-    top: 0;
+
     background-color: #a3a599e8;
-}
+} */
 
-
+/*
 
 .loginHeder {
     justify-content: space-between;
@@ -84,101 +141,4 @@
     height: 70px;
     width:  70px;
     border-radius: 100%;
-}
-/* .header{
-    padding: 15px 0 0;
-    height: 85px;
-    opacity: 5;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.headerScrol{
-}
-
-
-.headerLabel > h1 {
-    color: #ff0000;
-}
-.headerLabel > h2 {
-    color: #00000075;
-}
-.headerLabel {
-    margin:0 20px;
-    padding:0 13px;
-    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.986) 65%);
-    height: 60px;
-    width: 215px;
-    border-radius:0 15px 0 15px;
-    font-size:  25px;
-}
-
-.userUse{
-    color: #00000075;
-    padding: 5px;
-    border-radius:15px 0 15px 0;
-}
-.userAvatar{
-    margin:0 15px;
-    padding:0 5px;
-    height: 50px;
-    width: 70px;
-    border: solid;
-    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(196, 195, 195, 0.767) 65%);
-    border-color: #00d9ff;
-} */
-
-/* ----------------
-Nav
-=================*/
-/* .nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    font-size:  14px;
-    font-weight: 400;
-    text-transform: uppercase;
-    width: 450px;
-    height: 50px;
-
-
-}
-.nav_link{
-    margin-left: 10px;
-    margin-right: 10px;
-    color: rgb(51, 51, 51);
-    text-decoration: none;
-    transition: .2s linear;
-    padding: 5px 10px;
-    background: linear-gradient(to top,rgba(255, 255, 255, 0),rgb(241, 241, 241) 99%);
-    border-top: solid;
-    border-color: #ffffff;
-    border-radius: 1px;
-    padding-bottom: 5px;
-}
-
-
-.nav_link:hover {
-    color: rgba(255, 14, 14, 0.959);
-    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
-    border-radius: 17px 2px 17px 2px;
-
-}
-.nav_link:first-child {
-    margin-left: 10px;
-}
-.nav_link:last-child {
-    margin-right: 10px;
-}
-
-.active {
-    color: rgba(255, 14, 14, 0.959);
-    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
-    border-radius: 17px 2px 17px 2px;
-}
-
-.activeLink {
-    color: rgba(255, 14, 14, 0.959);
-    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 255, 255)80%);
-    border-radius: 17px 2px 17px 2px;
 } */

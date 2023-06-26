@@ -21,7 +21,6 @@ function PostList() {
         const getPosts = () => {
             setLoading(true)
             Posts.getPosts(0, 20).then(response => {
-                console.log(response)
                 setPosts(response.data['posts'])
                 setLoading(false)
             }).catch(err => {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../css/header/header.css';
+import  logo from '../img/site/logo.png'
 import NavUser from "./navigate/NavUser"
 import UserIcon from "./UserIcon";
 import { useAuth } from "../hook/useAuth";
@@ -12,13 +13,13 @@ function Header() {
 
     useEffect(() => {
         if (user) {
+            setStyleHeaders("header userHeader")
             setNavIn(<div className="containerMenu">
                 <NavUser />
-                <UserIcon name={user['name']} username={user['username']} />
+                <UserIcon user={user} />
             </div>)
-            setStyleHeaders("containerGrey header loginHeder")
         } else {
-            setStyleHeaders("containerGrey header")
+            setStyleHeaders("header")
             setNavIn(null)
         }
     }, [user])
@@ -26,7 +27,8 @@ function Header() {
     return (
         <header className={styleHeader}>
             <div className="headerLogo">
-                <h1>your logo</h1>
+                <img className="imgLogo" src={logo} alt="logo" />
+                <h1>my Blog</h1>
             </div>
             {navIn}
         </header>

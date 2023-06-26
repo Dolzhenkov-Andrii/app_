@@ -17,11 +17,12 @@ $api.interceptors.request.use((config) => {
 $api.interceptors.response.use((config) => {
     return config
 }, async (error) => {
+
     const originalRequest = error.config
-    // originalRequest._isRetry = false
     if (error.response.status === 401 && error.config && !originalRequest._isRetry) {
-        originalRequest._isRetry = true
         try{
+            originalRequest._isRetry = true
+
             const response = await axios.get(`${API_URL}/refresh_token`,
             {headers:{refresh_token: GetCookie('refresh_token')}})
             UpdateCookie('access_token', response.data.access_token)
@@ -29,6 +30,7 @@ $api.interceptors.response.use((config) => {
             return $api.request(originalRequest)
         } catch (e) {
             throw e
+            originalRequest._isRetry = false
         }
     }
     throw error

@@ -12,8 +12,10 @@ import Post from "./components/posts/Post";
 import PostList from "./components/posts/PostList";
 import Activation from "./components/Activation";
 import Profile from "./components/Profile";
+import NewPost from "./components/posts/NewPost";
 
 function App() {
+  
   const [indexRender, setIndexRender] = useState(<Authorization />);
   const { user } = useAuth();
 
@@ -36,6 +38,7 @@ function App() {
         <Route index="/*" element={indexRender} >
           <Route index element={<Profile />} />
           <Route path="posts" element={<PostList />} />
+          <Route path="new-post" element={<NewPost />} />
           <Route path="posts/post/:id" element={<Post />} />
         </Route>
         <Route path="activ" element={<Activation />} />

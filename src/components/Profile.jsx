@@ -1,26 +1,34 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import "../css/main.css";
 import "../css/profile.css";
 import { useAuth } from "../hook/useAuth";
+import ProfileInfo from "./ProfileInfo";
+import EditingProfile from "./UpdateProfile";
+
+
 
 function Profile() {
 
     const { user } = useAuth();
+    const [profileEditingActiv, updateEditing] = useState()
+
+    function isActivate(on){
+        if (!on){
+            updateEditing(<ProfileInfo user={user} callback={isActivate}/>)
+        } else {
+            updateEditing(<EditingProfile callback={isActivate} the_user={user}/>)
+        }
+    }
+
+    useEffect(() => {
+        isActivate(false)
+    }, [user])
 
     return (
         <div className="containerProfile">
-            <div className="containerUserInfo">
-                <img className="avatar" src={"http://127.0.0.1:5050/static/avatar.png"} />
-                <div className="userInfo">
-                    <h1>{user['username']}</h1>
-                    <h3>{user['surname']}</h3>
-                    <h3>{user['name']} </h3>
-                    <h4>{user['birthday']}</h4>
-                    <h4>{user['email']}</h4>
-                    <h4>{user['phone']} </h4>
-                    {console.log(user)}
-                </div>
-            </div>
+            {profileEditingActiv}
         </div>
     )
 }

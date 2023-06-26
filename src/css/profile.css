@@ -1,8 +1,8 @@
-.containerProfile {
+/* .containerProfile {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 25px;
     background-color: #A3A599;
     padding: 15px;
@@ -37,3 +37,43 @@
     width:  300px;
     border-radius: 100%;
 }
+.containerUpdateProfile{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.updateProfile{
+    position:absolute;
+}
+
+.editingProfile{
+
+    height: max-content;
+    display: flex;
+    background-color: #282623;
+    padding: 10px;
+    border-radius: 25px;
+}
+.editingAvatar{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.editingData{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 5px;
+    align-items: center;
+}
+
+.editingData > h4 {
+    width: 99%;
+    text-align: center;
+    background-color: #fcfdfba9;
+    border-radius: 5px;
+    padding: 8px;
+    opacity: 50%;
+} */

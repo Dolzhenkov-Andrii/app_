@@ -1,13 +1,12 @@
 import React from "react";
-
-function UserIcon({ username, name }) {
+const IMG_URL = process.env.REACT_APP_IMG_URL
+function UserIcon({user}) {
     return (
-        <div className="headerLabel userUse">
+        <div className="headerUserInfo">
             <div>
-            <h3>{username}</h3>
-            <h5>{name}</h5>
+            <h2>{user['username']}</h2>
             </div>
-            <img className="avatarMini" src={"http://127.0.0.1:5050/static/avatar.png"} />
+            {/* <img className="avatarMini" src={`${IMG_URL}${user['photo']? user['photo'] : '1234567890avatar.png'}`} /> */}
         </div>
     )
 }
