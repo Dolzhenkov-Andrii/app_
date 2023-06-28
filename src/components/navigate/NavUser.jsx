@@ -11,11 +11,7 @@ function NavUser(){
         posts: "nav_link",
         new_post: "nav_link",
     }
-    const [styleLink, setStyle] = useState({
-        home: "nav_link nav_link_activ",
-        posts: "nav_link",
-        new_post: "nav_link",
-    })
+    const [styleLink, setStyle] = useState(activeStyle)
     const {signOut} = useAuth();
     const navigate = useNavigate();
     function logOut() {

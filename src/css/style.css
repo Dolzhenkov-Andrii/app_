@@ -1,17 +1,28 @@
 body {
+    /* font-size: 18px; */
     margin: 0;
-    padding: 0;
+    padding: 50px 0 40px 0;
     width: 100%;
-    height: 95vh;
-    margin-top: 40px;
+    height: 100vh;
     min-height: 100%;
     font-family: 'EB Garamond', serif;
     font-weight: 400;
     color: #FFFFFF;
     background-color: #181818;
 }
-
-
+#root {
+    height: 100%;
+    width: 100%;
+}
+.main {
+    height: 100%;
+    padding: 60px 50px 80px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-direction: column; */
+}
 h1,
 h2,
 h3,
@@ -33,21 +44,15 @@ h6 {
     margin: 0;
     box-sizing: border-box;
 }
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
-     box-shadow: 0 0 0 30px #181818 inset !important;
-     color: #FFFFFF inset !important;
+.hidden {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
-input::before{
-    font: none;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-} */
-
 .contBoxButton {
     font-size: 20px;
 }
@@ -57,8 +62,7 @@ p {
 }
 
 a {
-    /* font-family: 'Playfair Display', serif; */
-    text-decoration: none;
+   text-decoration: none;
 }
 
 ul,
@@ -66,17 +70,49 @@ li {
     padding: 0;
     list-style: none;
 }
-
-.containerLayout {
-    /* height: 90vh; */
+::-webkit-calendar-picker-indicator {
+    background-color: #3F3F3F;
+    padding: 5px;
+    margin-right: 2px;
+    border-radius: 15%;
+}
+::-webkit-calendar-picker-indicator:hover {
+    transition: .2s;
+    background-color: #107EFF;
+}
+::-webkit-datetime-edit-text {
+    color: #ED3024; padding: 0 0.2em;
+}
+.errorBox {
+    height: 12px;
     width: 100%;
-    /* background-color: #282623; */
+    display: flex;
+    justify-content: center;
+    color: #ED3024
+}
+.headerUserInfo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.avatarMini{
+    background-color: #bbbbbb;
+    margin-left: 10px;
+    padding: 2px;
+    height: 45px;
+    width:  45px;
+    border-radius: 100%;
+}
 
+.containerLayout {
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /*
 

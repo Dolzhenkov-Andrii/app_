@@ -22,13 +22,7 @@
     border-radius: 20px;
     backdrop-filter: blur(15px);
 }
-.errorBox {
-    height: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: #ED3024
-}
+
 
 .contBoxForm {
     height: 200px;
@@ -40,6 +34,7 @@
 }
 
 .contInput {
+    font-size: 16px;
     color: #FFFFFF;
     height: 37px;
     width: 320px;
@@ -48,9 +43,11 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
+
 .contInput:focus {
     border-bottom:solid 1px #107EFF;
     background-color: none;
+    transition: .2s;
 }
 
 

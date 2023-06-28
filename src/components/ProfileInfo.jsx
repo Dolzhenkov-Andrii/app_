@@ -22,8 +22,6 @@ function ProfileInfo({user, callback}) {
             </div>
         </div>
     )
-
-
 }
 
 export default ProfileInfo

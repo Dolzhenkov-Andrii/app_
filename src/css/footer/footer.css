@@ -1,6 +1,6 @@
 
 .footer {
-    min-height: 40px;
+    height: 40px;
     max-height: max-content;
     color: rgba(175, 175, 175, 0.9);
     background-color: black;

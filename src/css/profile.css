@@ -1,3 +1,66 @@
+.containerProfile {
+    min-width: max-content;
+    width: 700px;
+    height: 100%;
+    /* background-color: #202020; */
+}
+.titleProfile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 75px;
+    border-bottom: solid 1px #107EFF;
+    /* justify-content: center; */
+}
+.staticUserInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 25px;
+    /* border-bottom: solid 1px #3137C9; */
+}
+.profFormUser{
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.profUserInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    justify-content: space-between;
+}
+
+.profUserAvatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content:  space-between;
+    /* height: max-content; */
+}
+
+.avatar {
+    height: 250px;
+    width: 250px;
+    border: solid 2px  #bbbbbb;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.inputAvatar {
+    background-color: #d12c20;
+}
+.inputAvatar:hover {
+    background-color: #ff0000;
+}
+.resetAvatar {
+    padding-top: 20px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: end;
+}
 /* .containerProfile {
     width: 100%;
     height: 100%;
